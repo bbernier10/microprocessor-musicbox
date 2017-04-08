@@ -1,0 +1,2365 @@
+
+Final.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00000fe6  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000002  00800060  00000fe6  0000107a  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .bss          0000000a  00800062  00800062  0000107c  2**0
+                  ALLOC
+  3 .debug_aranges 00000020  00000000  00000000  0000107c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  4 .debug_pubnames 00000193  00000000  00000000  0000109c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_info   00001119  00000000  00000000  0000122f  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_abbrev 00000252  00000000  00000000  00002348  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_line   00000dce  00000000  00000000  0000259a  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_frame  000000d0  00000000  00000000  00003368  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_str    0000020b  00000000  00000000  00003438  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_loc    00001247  00000000  00000000  00003643  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_ranges 000002d0  00000000  00000000  0000488a  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	aa c2       	rjmp	.+1364   	; 0x556 <__ctors_end>
+   2:	c5 c2       	rjmp	.+1418   	; 0x58e <__bad_interrupt>
+   4:	c4 c2       	rjmp	.+1416   	; 0x58e <__bad_interrupt>
+   6:	c3 c2       	rjmp	.+1414   	; 0x58e <__bad_interrupt>
+   8:	c2 c2       	rjmp	.+1412   	; 0x58e <__bad_interrupt>
+   a:	c1 c2       	rjmp	.+1410   	; 0x58e <__bad_interrupt>
+   c:	c0 c2       	rjmp	.+1408   	; 0x58e <__bad_interrupt>
+   e:	c0 c2       	rjmp	.+1408   	; 0x590 <__vector_7>
+  10:	be c2       	rjmp	.+1404   	; 0x58e <__bad_interrupt>
+  12:	bd c2       	rjmp	.+1402   	; 0x58e <__bad_interrupt>
+  14:	bc c2       	rjmp	.+1400   	; 0x58e <__bad_interrupt>
+  16:	bb c2       	rjmp	.+1398   	; 0x58e <__bad_interrupt>
+  18:	ba c2       	rjmp	.+1396   	; 0x58e <__bad_interrupt>
+
+0000001a <keyboard_notes>:
+  1a:	d8 d6 d3 ff ff                                      .....
+
+0000001f <mario>:
+  1f:	d6 10 d6 08 d6 10 ff 20 cb 10 d6 08 dc 08 ff 10     ....... ........
+  2f:	b9 08 ff 10 cb 08 ff 20 b9 10 ff 10 ab 08 ff 20     ....... ....... 
+  3f:	c0 10 ff 20 c7 10 ff 20 c4 10 c0 08 b9 53 d6 53     ... ... .....S.S
+  4f:	dc 53 e0 08 d8 10 dc 10 ff 20 d6 10 ff 20 cb 10     .S....... ... ..
+  5f:	d0 10 c7 10 ff 10 cb 08 ff 20 b9 10 ff 10 ab 08     ......... ......
+  6f:	ff 20 c0 10 ff 20 c7 10 ff 20 c4 10 c0 08 b9 53     . ... ... .....S
+  7f:	d6 53 dc 53 e0 08 d8 10 dc 10 ff 20 d6 10 ff 20     .S.S....... ... 
+  8f:	cb 10 d0 10 c7 10 ff 10 ff 10 dc 10 da 10 d8 10     ................
+  9f:	d3 08 d6 10 ff 20 bd 10 c0 10 cb 10 ff 20 c0 10     ..... ....... ..
+  af:	cb 10 d0 10 ff 10 dc 10 da 10 d8 10 d3 08 d6 10     ................
+  bf:	ff 20 e5 10 ff 20 e5 10 e5 08 ff 10 dc 10 da 10     . ... ..........
+  cf:	d8 10 d3 08 d6 10 ff 20 bd 10 c0 10 cb 10 ff 20     ....... ....... 
+  df:	c0 10 cb 10 d0 10 ff 10 d3 08 ff 20 d0 10 ff 10     ........... ....
+  ef:	cb 08 ff 08 ff 10 dc 10 da 10 d8 10 d3 08 d6 10     ................
+  ff:	ff 20 bd 10 c0 10 cb 10 ff 20 c0 10 cb 10 d0 10     . ....... ......
+ 10f:	ff 10 dc 10 da 10 d8 10 d3 08 d6 10 ff 20 e5 10     ............. ..
+ 11f:	ff 20 e5 10 e5 08 ff 08 ff 10 dc 10 da 10 d8 10     . ..............
+ 12f:	d3 08 d6 10 ff 20 bd 10 c0 10 cb 10 ff 20 c0 10     ..... ....... ..
+ 13f:	cb 10 d0 10 ff 10 d3 08 ff 20 d0 10 ff 10 cb 08     ......... ......
+ 14f:	ff 10 cb 10 cb 08 cb 10 ff 20 cb 10 d0 08 d6 10     ......... ......
+ 15f:	cb 08 c0 10 b9 08 ff 10 cb 10 cb 08 cb 10 ff 20     ............... 
+ 16f:	cb 10 d0 10 d6 10 ff 04 cb 10 cb 08 cb 10 ff 20     ............... 
+ 17f:	cb 10 d0 08 d6 10 cb 08 c0 10 b9 08 ff 10 d6 10     ................
+ 18f:	d6 08 d6 10 ff 20 cb 10 d6 08 dc 08 ff 10 b9 08     ..... ..........
+ 19f:	ff 10 cb 08 ff 20 b9 10 ff 10 ab 08 ff 20 c0 10     ..... ....... ..
+ 1af:	ff 20 c7 10 ff 20 c4 10 c0 08 b9 53 d6 53 dc 53     . ... .....S.S.S
+ 1bf:	e0 08 d8 10 dc 10 ff 20 d6 10 ff 20 cb 10 d0 10     ....... ... ....
+ 1cf:	c7 10 ff 10 cb 08 ff 20 b9 10 ff 10 ab 08 ff 20     ....... ....... 
+ 1df:	c0 10 ff 20 c7 10 ff 20 c4 10 c0 08 b9 53 d6 53     ... ... .....S.S
+ 1ef:	dc 53 e0 08 d8 10 dc 10 ff 20 d6 10 ff 20 cb 10     .S....... ... ..
+ 1ff:	d0 10 c7 10 ff 10 d6 10 cb 08 b9 10 ff 10 bd 08     ................
+ 20f:	c0 10 d8 08 d8 10 c0 08 ff 10 c7 53 e0 53 e0 53     ...........S.S.S
+ 21f:	e0 53 dc 53 d8 53 d6 10 cb 08 c0 10 b9 08 ff 10     .S.S.S..........
+ 22f:	d6 10 cb 08 b9 10 ff 10 bd 08 c0 10 d8 08 d8 10     ................
+ 23f:	c0 08 ff 10 c7 10 d8 08 d8 10 d8 53 d6 53 d0 53     ...........S.S.S
+ 24f:	cb 10 b9 08 b9 10 95 08 ff 10 d6 10 cb 08 b9 10     ................
+ 25f:	ff 10 bd 08 c0 10 d8 08 d8 10 c0 08 ff 10 c7 53     ...............S
+ 26f:	e0 53 e0 53 e0 53 dc 53 d8 53 d6 10 cb 08 c0 10     .S.S.S.S.S......
+ 27f:	b9 08 ff 10 d6 10 cb 08 b9 10 ff 10 bd 08 c0 10     ................
+ 28f:	d8 08 d8 10 c0 08 ff 10 c7 10 d8 08 d8 10 d8 53     ...............S
+ 29f:	d6 53 d0 53 cb 10 b9 08 b9 10 95 08 ff 10 cb 10     .S.S............
+ 2af:	cb 08 cb 10 ff 20 cb 10 d0 08 d6 10 cb 08 c0 10     ..... ..........
+ 2bf:	b9 08 ff 10 cb 10 cb 08 cb 10 ff 20 cb 10 d0 10     ........... ....
+ 2cf:	d6 10 ff 04 cb 10 cb 08 cb 10 ff 20 cb 10 d0 08     ........... ....
+ 2df:	d6 10 cb 08 c0 10 b9 08 ff 10 d6 10 d6 08 d6 10     ................
+ 2ef:	ff 20 cb 10 d6 08 dc 08 ff 10 b9 08 ff 10 d6 10     . ..............
+ 2ff:	cb 08 b9 10 ff 10 bd 08 c0 10 d8 08 d8 10 c0 08     ................
+ 30f:	ff 10 c7 53 e0 53 e0 53 e0 53 dc 53 d8 53 d6 10     ...S.S.S.S.S.S..
+ 31f:	cb 08 c0 10 b9 08 ff 10 d6 10 cb 08 b9 10 ff 10     ................
+ 32f:	bd 08 c0 10 d8 08 d8 10 c0 08 ff 10 c7 10 d8 08     ................
+ 33f:	d8 10 d8 53 d6 53 d0 53 cb 10 b9 08 b9 10 95 08     ...S.S.S........
+ 34f:	ff 10 cb 08 ff 20 b9 a2 ab 08 c0 53 c7 53 c0 53     ..... .....S.S.S
+ 35f:	bd 53 c4 53 c0 08 ab 10 a1 10 ab 1c ff ff           .S.S..........
+
+0000036d <heart_and_soul>:
+ 36d:	b0 04 b0 04 b0 1c b0 08 ab 08 a1 08 ab 08 b0 08     ................
+ 37d:	b9 04 c0 04 c0 04 c0 1c c0 08 b9 08 b0 08 b9 08     ................
+ 38d:	c0 08 c4 04 cb 02 b0 1c d0 08 cb 08 c4 08 c0 04     ................
+ 39d:	b9 04 ab 1c b9 08 c0 08 c4 08 95 04 c4 08 c0 08     ................
+ 3ad:	b9 02 b0 04 b0 04 b0 1c b0 08 ab 08 a1 08 ab 08     ................
+ 3bd:	b0 08 b9 04 c0 04 c0 04 c0 1c c0 08 b9 08 b0 08     ................
+ 3cd:	b9 08 c0 08 c4 04 cb 02 b0 1c d0 08 cb 08 c4 08     ................
+ 3dd:	c0 04 b9 04 ab 1c b9 08 c0 08 c4 08 cb 04 ab 02     ................
+ 3ed:	ff ff                                               ..
+
+000003ef <jingle_bells>:
+ 3ef:	a1 08 c7 08 c0 08 b9 08 a1 04 ff 10 a1 10 a1 10     ................
+ 3ff:	a1 08 c7 08 c0 08 b9 08 ab 04 ff 10 ab 08 cb 08     ................
+ 40f:	c7 08 c0 08 b4 04 ff 10 d6 08 d0 08 cb 08 c0 08     ................
+ 41f:	c7 04 ff 10 a1 08 c7 08 c0 08 b9 08 a1 04 ff 08     ................
+ 42f:	a1 08 a1 08 c7 08 c0 08 b9 08 ab 04 ff 10 ab 08     ................
+ 43f:	ab 08 cb 08 c7 08 c0 08 d0 08 d0 08 d0 08 d0 08     ................
+ 44f:	d6 08 d0 08 cb 08 c0 08 b9 04 ff 10 c7 08 c7 08     ................
+ 45f:	c7 04 c7 08 c7 08 c7 04 c7 08 d0 08 b9 52 c0 10     .............R..
+ 46f:	c7 04 ff 10 cb 08 cb 08 cb 52 cb 10 cb 08 c7 08     .........R......
+ 47f:	c7 08 c7 10 c7 10 c7 08 c0 08 c0 08 b9 08 c0 04     ................
+ 48f:	d0 04 c7 08 c7 08 c7 04 c7 08 c7 08 c7 04 c7 08     ................
+ 49f:	d0 08 b9 52 c0 10 c7 04 ff 10 cb 08 cb 08 cb 52     ...R...........R
+ 4af:	cb 10 cb 08 c7 08 c7 08 c7 10 c7 10 d0 08 d0 08     ................
+ 4bf:	cb 08 c0 08 b9 2a ff 08 ff ff                       .....*....
+
+000004c9 <god_rest>:
+ 4c9:	ab 04 ab 04 c7 04 c7 04 c0 04 b9 04 b4 04 ab 04     ................
+ 4d9:	a1 04 ab 04 b4 04 b9 04 c0 04 c7 02 ff 10 ab 04     ................
+ 4e9:	ab 04 c7 04 c7 04 c0 04 b9 04 b4 04 ab 04 a1 04     ................
+ 4f9:	ab 04 b4 04 b9 04 c0 04 c7 02 ff 08 c7 04 cb 04     ................
+ 509:	c0 04 c7 04 cb 04 d0 04 d6 04 c7 04 c0 04 b9 04     ................
+ 519:	ab 04 b4 04 b9 04 c0 02 b9 04 c0 04 c7 02 cb 04     ................
+ 529:	c7 04 c7 04 c0 04 b9 04 b4 04 ab 02 b9 08 b4 08     ................
+ 539:	ab 04 c0 02 b9 04 c0 04 c7 04 cb 04 d0 04 d6 04     ................
+ 549:	c7 04 c0 04 b9 04 b4 04 ab 02 ff ff 00              .............
+
+00000556 <__ctors_end>:
+ 556:	11 24       	eor	r1, r1
+ 558:	1f be       	out	0x3f, r1	; 63
+ 55a:	cf e5       	ldi	r28, 0x5F	; 95
+ 55c:	d1 e0       	ldi	r29, 0x01	; 1
+ 55e:	de bf       	out	0x3e, r29	; 62
+ 560:	cd bf       	out	0x3d, r28	; 61
+
+00000562 <__do_copy_data>:
+ 562:	10 e0       	ldi	r17, 0x00	; 0
+ 564:	a0 e6       	ldi	r26, 0x60	; 96
+ 566:	b0 e0       	ldi	r27, 0x00	; 0
+ 568:	e6 ee       	ldi	r30, 0xE6	; 230
+ 56a:	ff e0       	ldi	r31, 0x0F	; 15
+ 56c:	03 c0       	rjmp	.+6      	; 0x574 <.do_copy_data_start>
+
+0000056e <.do_copy_data_loop>:
+ 56e:	c8 95       	lpm
+ 570:	31 96       	adiw	r30, 0x01	; 1
+ 572:	0d 92       	st	X+, r0
+
+00000574 <.do_copy_data_start>:
+ 574:	a2 36       	cpi	r26, 0x62	; 98
+ 576:	b1 07       	cpc	r27, r17
+ 578:	d1 f7       	brne	.-12     	; 0x56e <.do_copy_data_loop>
+
+0000057a <__do_clear_bss>:
+ 57a:	10 e0       	ldi	r17, 0x00	; 0
+ 57c:	a2 e6       	ldi	r26, 0x62	; 98
+ 57e:	b0 e0       	ldi	r27, 0x00	; 0
+ 580:	01 c0       	rjmp	.+2      	; 0x584 <.do_clear_bss_start>
+
+00000582 <.do_clear_bss_loop>:
+ 582:	1d 92       	st	X+, r1
+
+00000584 <.do_clear_bss_start>:
+ 584:	ac 36       	cpi	r26, 0x6C	; 108
+ 586:	b1 07       	cpc	r27, r17
+ 588:	e1 f7       	brne	.-8      	; 0x582 <.do_clear_bss_loop>
+ 58a:	b6 d4       	rcall	.+2412   	; 0xef8 <main>
+ 58c:	2a c5       	rjmp	.+2644   	; 0xfe2 <_exit>
+
+0000058e <__bad_interrupt>:
+ 58e:	38 cd       	rjmp	.-1424   	; 0x0 <__vectors>
+
+00000590 <__vector_7>:
+}
+
+
+/* Interrupt Service Routine */
+ISR(TIMER0_OVF_vect)          
+{
+ 590:	1f 92       	push	r1
+ 592:	0f 92       	push	r0
+ 594:	0f b6       	in	r0, 0x3f	; 63
+ 596:	0f 92       	push	r0
+ 598:	11 24       	eor	r1, r1
+ 59a:	8f 93       	push	r24
+ 59c:	9f 93       	push	r25
+    TCNT0  = note;
+ 59e:	80 91 60 00 	lds	r24, 0x0060
+ 5a2:	82 bf       	out	0x32, r24	; 50
+	if(TCNT0!=OFF)
+ 5a4:	82 b7       	in	r24, 0x32	; 50
+ 5a6:	8f 3f       	cpi	r24, 0xFF	; 255
+ 5a8:	21 f0       	breq	.+8      	; 0x5b2 <__vector_7+0x22>
+    	PORTC ^= SPKR;
+ 5aa:	85 b3       	in	r24, 0x15	; 21
+ 5ac:	90 e2       	ldi	r25, 0x20	; 32
+ 5ae:	89 27       	eor	r24, r25
+ 5b0:	85 bb       	out	0x15, r24	; 21
+}
+ 5b2:	9f 91       	pop	r25
+ 5b4:	8f 91       	pop	r24
+ 5b6:	0f 90       	pop	r0
+ 5b8:	0f be       	out	0x3f, r0	; 63
+ 5ba:	0f 90       	pop	r0
+ 5bc:	1f 90       	pop	r1
+ 5be:	18 95       	reti
+
+000005c0 <read_switches>:
+
+
+/* Function to Read Switch Presses */
+unsigned char read_switches(void)
+{
+ 5c0:	30 91 6b 00 	lds	r19, 0x006B
+ 5c4:	20 e0       	ldi	r18, 0x00	; 0
+ 5c6:	40 e0       	ldi	r20, 0x00	; 0
+    milliseconds can be achieved.
+ */
+void
+_delay_loop_2(uint16_t __count)
+{
+	__asm__ volatile (
+ 5c8:	60 e0       	ldi	r22, 0x00	; 0
+ 5ca:	74 e2       	ldi	r23, 0x24	; 36
+    unsigned char x, x_switch=0, pressed=0, end=0;
+	while(!end)
+    {
+        x = PINA;
+ 5cc:	89 b3       	in	r24, 0x19	; 25
+		x &= 0x0F;
+ 5ce:	8f 70       	andi	r24, 0x0F	; 15
+        if((x!=xoldz)&&(x!=0x0F)){   //SW pressed
+ 5d0:	83 17       	cp	r24, r19
+ 5d2:	79 f0       	breq	.+30     	; 0x5f2 <read_switches+0x32>
+ 5d4:	8f 30       	cpi	r24, 0x0F	; 15
+ 5d6:	69 f0       	breq	.+26     	; 0x5f2 <read_switches+0x32>
+ 5d8:	86 2f       	mov	r24, r22
+ 5da:	97 2f       	mov	r25, r23
+ 5dc:	01 97       	sbiw	r24, 0x01	; 1
+ 5de:	f1 f7       	brne	.-4      	; 0x5dc <read_switches+0x1c>
+            _delay_ms(10);
+            x = PINA;
+ 5e0:	89 b3       	in	r24, 0x19	; 25
+            if((x!=xoldz)&&(x!=0x0F)){
+ 5e2:	83 17       	cp	r24, r19
+ 5e4:	31 f0       	breq	.+12     	; 0x5f2 <read_switches+0x32>
+ 5e6:	8f 30       	cpi	r24, 0x0F	; 15
+ 5e8:	21 f0       	breq	.+8      	; 0x5f2 <read_switches+0x32>
+ 5ea:	38 2f       	mov	r19, r24
+ 5ec:	28 2f       	mov	r18, r24
+ 5ee:	41 e0       	ldi	r20, 0x01	; 1
+ 5f0:	03 c0       	rjmp	.+6      	; 0x5f8 <read_switches+0x38>
+ 5f2:	38 2f       	mov	r19, r24
+                x_switch = x;
+                pressed=1;
+            }
+        }
+        xoldz = x;
+        if(pressed==1 && x!=x_switch && decode_switches(x_switch)!=0x04)   //Will only return once switch is released & has valid value
+ 5f4:	41 30       	cpi	r20, 0x01	; 1
+ 5f6:	51 f7       	brne	.-44     	; 0x5cc <read_switches+0xc>
+ 5f8:	32 17       	cp	r19, r18
+ 5fa:	41 f3       	breq	.-48     	; 0x5cc <read_switches+0xc>
+
+
+/* Switch Decoding Function */
+unsigned char decode_switches(unsigned char x)
+{
+    switch(x){
+ 5fc:	2b 30       	cpi	r18, 0x0B	; 11
+ 5fe:	49 f0       	breq	.+18     	; 0x612 <read_switches+0x52>
+ 600:	2c 30       	cpi	r18, 0x0C	; 12
+ 602:	18 f4       	brcc	.+6      	; 0x60a <read_switches+0x4a>
+ 604:	27 30       	cpi	r18, 0x07	; 7
+ 606:	11 f7       	brne	.-60     	; 0x5cc <read_switches+0xc>
+ 608:	04 c0       	rjmp	.+8      	; 0x612 <read_switches+0x52>
+ 60a:	82 2f       	mov	r24, r18
+ 60c:	8d 50       	subi	r24, 0x0D	; 13
+ 60e:	82 30       	cpi	r24, 0x02	; 2
+ 610:	e8 f6       	brcc	.-70     	; 0x5cc <read_switches+0xc>
+ 612:	30 93 6b 00 	sts	0x006B, r19
+        xoldz = x;
+        if(pressed==1 && x!=x_switch && decode_switches(x_switch)!=0x04)   //Will only return once switch is released & has valid value
+            end=1;
+    }
+    return decode_switches(x_switch);
+}
+ 616:	2b 30       	cpi	r18, 0x0B	; 11
+ 618:	71 f0       	breq	.+28     	; 0x636 <read_switches+0x76>
+ 61a:	2c 30       	cpi	r18, 0x0C	; 12
+ 61c:	18 f4       	brcc	.+6      	; 0x624 <read_switches+0x64>
+ 61e:	27 30       	cpi	r18, 0x07	; 7
+ 620:	71 f4       	brne	.+28     	; 0x63e <read_switches+0x7e>
+ 622:	0b c0       	rjmp	.+22     	; 0x63a <read_switches+0x7a>
+ 624:	2d 30       	cpi	r18, 0x0D	; 13
+ 626:	19 f0       	breq	.+6      	; 0x62e <read_switches+0x6e>
+ 628:	2e 30       	cpi	r18, 0x0E	; 14
+ 62a:	49 f4       	brne	.+18     	; 0x63e <read_switches+0x7e>
+ 62c:	02 c0       	rjmp	.+4      	; 0x632 <read_switches+0x72>
+ 62e:	81 e0       	ldi	r24, 0x01	; 1
+ 630:	08 95       	ret
+ 632:	80 e0       	ldi	r24, 0x00	; 0
+ 634:	08 95       	ret
+ 636:	82 e0       	ldi	r24, 0x02	; 2
+ 638:	08 95       	ret
+ 63a:	83 e0       	ldi	r24, 0x03	; 3
+ 63c:	08 95       	ret
+ 63e:	84 e0       	ldi	r24, 0x04	; 4
+ 640:	08 95       	ret
+
+00000642 <decode_switches>:
+
+
+/* Switch Decoding Function */
+unsigned char decode_switches(unsigned char x)
+{
+    switch(x){
+ 642:	8b 30       	cpi	r24, 0x0B	; 11
+ 644:	71 f0       	breq	.+28     	; 0x662 <decode_switches+0x20>
+ 646:	8c 30       	cpi	r24, 0x0C	; 12
+ 648:	18 f4       	brcc	.+6      	; 0x650 <decode_switches+0xe>
+ 64a:	87 30       	cpi	r24, 0x07	; 7
+ 64c:	71 f4       	brne	.+28     	; 0x66a <decode_switches+0x28>
+ 64e:	0b c0       	rjmp	.+22     	; 0x666 <decode_switches+0x24>
+ 650:	8d 30       	cpi	r24, 0x0D	; 13
+ 652:	19 f0       	breq	.+6      	; 0x65a <decode_switches+0x18>
+ 654:	8e 30       	cpi	r24, 0x0E	; 14
+ 656:	49 f4       	brne	.+18     	; 0x66a <decode_switches+0x28>
+ 658:	02 c0       	rjmp	.+4      	; 0x65e <decode_switches+0x1c>
+ 65a:	81 e0       	ldi	r24, 0x01	; 1
+ 65c:	08 95       	ret
+ 65e:	80 e0       	ldi	r24, 0x00	; 0
+ 660:	08 95       	ret
+ 662:	82 e0       	ldi	r24, 0x02	; 2
+ 664:	08 95       	ret
+        case 0x0E:
+            return 0x00;
+        case 0x0D:
+            return 0x01;
+        case 0x0B:
+            return 0x02;
+ 666:	83 e0       	ldi	r24, 0x03	; 3
+ 668:	08 95       	ret
+        case 0x07:
+            return 0x03;
+ 66a:	84 e0       	ldi	r24, 0x04	; 4
+        default:
+            return 0x04;
+    }
+}
+ 66c:	08 95       	ret
+
+0000066e <number>:
+
+
+/* Function to Manipulate Number */
+int number(void)
+{
+ 66e:	1f 93       	push	r17
+    unsigned char x=0;
+    PORTA |= 0x0F;
+ 670:	8b b3       	in	r24, 0x1b	; 27
+ 672:	8f 60       	ori	r24, 0x0F	; 15
+ 674:	8b bb       	out	0x1b, r24	; 27
+	PORTA &= 0x0F;
+ 676:	8b b3       	in	r24, 0x1b	; 27
+ 678:	8f 70       	andi	r24, 0x0F	; 15
+ 67a:	8b bb       	out	0x1b, r24	; 27
+	PORTA |= mode_0_number<<4;      //Displays current number value to LEDs
+ 67c:	9b b3       	in	r25, 0x1b	; 27
+ 67e:	80 91 62 00 	lds	r24, 0x0062
+ 682:	82 95       	swap	r24
+ 684:	80 7f       	andi	r24, 0xF0	; 240
+ 686:	89 2b       	or	r24, r25
+ 688:	8b bb       	out	0x1b, r24	; 27
+    while(x!=3)
+    {
+        PORTA |= mode_0_number<<4;      //Displays current number value to LEDs
+        x = read_switches();
+        PORTA = 0x0F;
+ 68a:	1f e0       	ldi	r17, 0x0F	; 15
+    PORTA |= 0x0F;
+	PORTA &= 0x0F;
+	PORTA |= mode_0_number<<4;      //Displays current number value to LEDs
+    while(x!=3)
+    {
+        PORTA |= mode_0_number<<4;      //Displays current number value to LEDs
+ 68c:	9b b3       	in	r25, 0x1b	; 27
+ 68e:	80 91 62 00 	lds	r24, 0x0062
+ 692:	82 95       	swap	r24
+ 694:	80 7f       	andi	r24, 0xF0	; 240
+ 696:	89 2b       	or	r24, r25
+ 698:	8b bb       	out	0x1b, r24	; 27
+        x = read_switches();
+ 69a:	92 df       	rcall	.-220    	; 0x5c0 <read_switches>
+        PORTA = 0x0F;
+ 69c:	1b bb       	out	0x1b, r17	; 27
+		switch(x){
+ 69e:	81 30       	cpi	r24, 0x01	; 1
+ 6a0:	29 f0       	breq	.+10     	; 0x6ac <number+0x3e>
+ 6a2:	81 30       	cpi	r24, 0x01	; 1
+ 6a4:	38 f0       	brcs	.+14     	; 0x6b4 <number+0x46>
+ 6a6:	82 30       	cpi	r24, 0x02	; 2
+ 6a8:	91 f4       	brne	.+36     	; 0x6ce <number+0x60>
+ 6aa:	09 c0       	rjmp	.+18     	; 0x6be <number+0x50>
+            case 0:
+                mode_0_number = 0;      //Resets number value
+                break;
+            case 1:
+                if(mode_0_number==15) mode_0_number=0;
+ 6ac:	80 91 62 00 	lds	r24, 0x0062
+ 6b0:	8f 30       	cpi	r24, 0x0F	; 15
+ 6b2:	19 f4       	brne	.+6      	; 0x6ba <number+0x4c>
+ 6b4:	10 92 62 00 	sts	0x0062, r1
+ 6b8:	e9 cf       	rjmp	.-46     	; 0x68c <number+0x1e>
+                else mode_0_number++;   //Increments number by 1
+ 6ba:	8f 5f       	subi	r24, 0xFF	; 255
+ 6bc:	05 c0       	rjmp	.+10     	; 0x6c8 <number+0x5a>
+                break;
+            case 2:
+                if(mode_0_number>0) mode_0_number--;
+ 6be:	80 91 62 00 	lds	r24, 0x0062
+ 6c2:	88 23       	and	r24, r24
+ 6c4:	19 f3       	breq	.-58     	; 0x68c <number+0x1e>
+ 6c6:	81 50       	subi	r24, 0x01	; 1
+ 6c8:	80 93 62 00 	sts	0x0062, r24
+ 6cc:	df cf       	rjmp	.-66     	; 0x68c <number+0x1e>
+{
+    unsigned char x=0;
+    PORTA |= 0x0F;
+	PORTA &= 0x0F;
+	PORTA |= mode_0_number<<4;      //Displays current number value to LEDs
+    while(x!=3)
+ 6ce:	83 30       	cpi	r24, 0x03	; 3
+ 6d0:	e9 f6       	brne	.-70     	; 0x68c <number+0x1e>
+            default:
+                break;
+        }
+    }
+    return 0;
+}
+ 6d2:	80 e0       	ldi	r24, 0x00	; 0
+ 6d4:	90 e0       	ldi	r25, 0x00	; 0
+ 6d6:	1f 91       	pop	r17
+ 6d8:	08 95       	ret
+
+000006da <password_reset>:
+}
+
+
+/* Function Used to Reset the Password */
+int password_reset(void)
+{
+ 6da:	ff 92       	push	r15
+ 6dc:	0f 93       	push	r16
+ 6de:	1f 93       	push	r17
+	PORTA = 0x0F;
+ 6e0:	8f e0       	ldi	r24, 0x0F	; 15
+ 6e2:	8b bb       	out	0x1b, r24	; 27
+    unsigned char pw_reset=0;
+    unsigned char reset[4];	
+    while(!pw_reset)
+    {
+		PORTA |= 0x2F;
+ 6e4:	8b b3       	in	r24, 0x1b	; 27
+ 6e6:	8f 62       	ori	r24, 0x2F	; 47
+ 6e8:	8b bb       	out	0x1b, r24	; 27
+ 6ea:	88 e8       	ldi	r24, 0x88	; 136
+ 6ec:	93 e1       	ldi	r25, 0x13	; 19
+ 6ee:	2c e5       	ldi	r18, 0x5C	; 92
+ 6f0:	30 e0       	ldi	r19, 0x00	; 0
+ 6f2:	e2 2f       	mov	r30, r18
+ 6f4:	f3 2f       	mov	r31, r19
+ 6f6:	31 97       	sbiw	r30, 0x01	; 1
+ 6f8:	f1 f7       	brne	.-4      	; 0x6f6 <password_reset+0x1c>
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+ 6fa:	01 97       	sbiw	r24, 0x01	; 1
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+ 6fc:	d1 f7       	brne	.-12     	; 0x6f2 <password_reset+0x18>
+		_delay_ms(500);
+		reset[0] = read_switches();
+ 6fe:	60 df       	rcall	.-320    	; 0x5c0 <read_switches>
+ 700:	f8 2e       	mov	r15, r24
+		reset[1] = read_switches();
+ 702:	5e df       	rcall	.-324    	; 0x5c0 <read_switches>
+ 704:	08 2f       	mov	r16, r24
+		reset[2] = read_switches();
+ 706:	5c df       	rcall	.-328    	; 0x5c0 <read_switches>
+ 708:	18 2f       	mov	r17, r24
+		reset[3] = read_switches();
+ 70a:	5a df       	rcall	.-332    	; 0x5c0 <read_switches>
+		pass0 = reset[0];
+ 70c:	f0 92 63 00 	sts	0x0063, r15
+		pass1 = reset[1];
+ 710:	00 93 64 00 	sts	0x0064, r16
+		pass2 = reset[2];
+ 714:	10 93 65 00 	sts	0x0065, r17
+		pass3 = reset[3];
+ 718:	80 93 66 00 	sts	0x0066, r24
+        pw_reset = 1;
+    }
+	PORTA = 0x0F;
+ 71c:	8f e0       	ldi	r24, 0x0F	; 15
+ 71e:	8b bb       	out	0x1b, r24	; 27
+    return 0;
+}
+ 720:	80 e0       	ldi	r24, 0x00	; 0
+ 722:	90 e0       	ldi	r25, 0x00	; 0
+ 724:	1f 91       	pop	r17
+ 726:	0f 91       	pop	r16
+ 728:	ff 90       	pop	r15
+ 72a:	08 95       	ret
+
+0000072c <three_note_keyboard>:
+
+
+/* Three Key Keyboard */
+int three_note_keyboard(void)
+{
+	PORTA = 0x0F;
+ 72c:	8f e0       	ldi	r24, 0x0F	; 15
+ 72e:	8b bb       	out	0x1b, r24	; 27
+	PORTA |= 0x4F;
+ 730:	8b b3       	in	r24, 0x1b	; 27
+ 732:	8f 64       	ori	r24, 0x4F	; 79
+ 734:	8b bb       	out	0x1b, r24	; 27
+    unsigned char xkey=0;
+    while(xkey!=3)
+    {
+        xkey = decode_switches(PINA);
+ 736:	89 b3       	in	r24, 0x19	; 25
+
+
+/* Switch Decoding Function */
+unsigned char decode_switches(unsigned char x)
+{
+    switch(x){
+ 738:	8b 30       	cpi	r24, 0x0B	; 11
+ 73a:	71 f0       	breq	.+28     	; 0x758 <three_note_keyboard+0x2c>
+ 73c:	8c 30       	cpi	r24, 0x0C	; 12
+ 73e:	18 f4       	brcc	.+6      	; 0x746 <three_note_keyboard+0x1a>
+ 740:	87 30       	cpi	r24, 0x07	; 7
+ 742:	71 f4       	brne	.+28     	; 0x760 <three_note_keyboard+0x34>
+ 744:	0b c0       	rjmp	.+22     	; 0x75c <three_note_keyboard+0x30>
+ 746:	8d 30       	cpi	r24, 0x0D	; 13
+ 748:	19 f0       	breq	.+6      	; 0x750 <three_note_keyboard+0x24>
+ 74a:	8e 30       	cpi	r24, 0x0E	; 14
+ 74c:	49 f4       	brne	.+18     	; 0x760 <three_note_keyboard+0x34>
+ 74e:	02 c0       	rjmp	.+4      	; 0x754 <three_note_keyboard+0x28>
+ 750:	81 e0       	ldi	r24, 0x01	; 1
+ 752:	07 c0       	rjmp	.+14     	; 0x762 <three_note_keyboard+0x36>
+ 754:	80 e0       	ldi	r24, 0x00	; 0
+ 756:	05 c0       	rjmp	.+10     	; 0x762 <three_note_keyboard+0x36>
+ 758:	82 e0       	ldi	r24, 0x02	; 2
+ 75a:	03 c0       	rjmp	.+6      	; 0x762 <three_note_keyboard+0x36>
+ 75c:	83 e0       	ldi	r24, 0x03	; 3
+ 75e:	01 c0       	rjmp	.+2      	; 0x762 <three_note_keyboard+0x36>
+ 760:	84 e0       	ldi	r24, 0x04	; 4
+	PORTA |= 0x4F;
+    unsigned char xkey=0;
+    while(xkey!=3)
+    {
+        xkey = decode_switches(PINA);
+		note = pgm_read_byte(&keyboard_notes[xkey]);
+ 762:	e8 2f       	mov	r30, r24
+ 764:	f0 e0       	ldi	r31, 0x00	; 0
+ 766:	e6 5e       	subi	r30, 0xE6	; 230
+ 768:	ff 4f       	sbci	r31, 0xFF	; 255
+ 76a:	c8 95       	lpm
+ 76c:	e0 2d       	mov	r30, r0
+ 76e:	e0 93 60 00 	sts	0x0060, r30
+int three_note_keyboard(void)
+{
+	PORTA = 0x0F;
+	PORTA |= 0x4F;
+    unsigned char xkey=0;
+    while(xkey!=3)
+ 772:	83 30       	cpi	r24, 0x03	; 3
+ 774:	01 f7       	brne	.-64     	; 0x736 <three_note_keyboard+0xa>
+    {
+        xkey = decode_switches(PINA);
+		note = pgm_read_byte(&keyboard_notes[xkey]);
+    }
+	PORTA = 0x0F;
+ 776:	8f e0       	ldi	r24, 0x0F	; 15
+ 778:	8b bb       	out	0x1b, r24	; 27
+ 77a:	8c ed       	ldi	r24, 0xDC	; 220
+ 77c:	95 e0       	ldi	r25, 0x05	; 5
+ 77e:	2c e5       	ldi	r18, 0x5C	; 92
+ 780:	30 e0       	ldi	r19, 0x00	; 0
+ 782:	e2 2f       	mov	r30, r18
+ 784:	f3 2f       	mov	r31, r19
+ 786:	31 97       	sbiw	r30, 0x01	; 1
+ 788:	f1 f7       	brne	.-4      	; 0x786 <three_note_keyboard+0x5a>
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+ 78a:	01 97       	sbiw	r24, 0x01	; 1
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+ 78c:	d1 f7       	brne	.-12     	; 0x782 <three_note_keyboard+0x56>
+	_delay_ms(150);
+	return 0;
+}
+ 78e:	80 e0       	ldi	r24, 0x00	; 0
+ 790:	90 e0       	ldi	r25, 0x00	; 0
+ 792:	08 95       	ret
+
+00000794 <mario_song>:
+
+
+/* Plays Mario Theme Song */
+int mario_song(void)
+{
+ 794:	1f 93       	push	r17
+	int x=0;
+	unsigned char length=0;
+	unsigned char end=0;
+	PORTA = 0x0F;
+ 796:	8f e0       	ldi	r24, 0x0F	; 15
+ 798:	8b bb       	out	0x1b, r24	; 27
+ 79a:	40 e2       	ldi	r20, 0x20	; 32
+ 79c:	50 e0       	ldi	r21, 0x00	; 0
+ 79e:	a9 e9       	ldi	r26, 0x99	; 153
+ 7a0:	b3 e0       	ldi	r27, 0x03	; 3
+			if(length==83)	_delay_ms(200);
+			if(length==16)	_delay_ms(150);
+			if(length==32) 	_delay_ms(75);
+			if(length==100)	_delay_ms(1);
+			if(note!=OFF){ 
+				note = OFF;
+ 7a2:	6c e5       	ldi	r22, 0x5C	; 92
+ 7a4:	70 e0       	ldi	r23, 0x00	; 0
+ 7a6:	1f ef       	ldi	r17, 0xFF	; 255
+	unsigned char length=0;
+	unsigned char end=0;
+	PORTA = 0x0F;
+    while(end!=3 && length!=OFF)
+    {
+        end = decode_switches( PINA );
+ 7a8:	89 b3       	in	r24, 0x19	; 25
+
+
+/* Switch Decoding Function */
+unsigned char decode_switches(unsigned char x)
+{
+    switch(x){
+ 7aa:	8b 30       	cpi	r24, 0x0B	; 11
+ 7ac:	71 f0       	breq	.+28     	; 0x7ca <mario_song+0x36>
+ 7ae:	8c 30       	cpi	r24, 0x0C	; 12
+ 7b0:	18 f4       	brcc	.+6      	; 0x7b8 <mario_song+0x24>
+ 7b2:	87 30       	cpi	r24, 0x07	; 7
+ 7b4:	71 f4       	brne	.+28     	; 0x7d2 <mario_song+0x3e>
+ 7b6:	0b c0       	rjmp	.+22     	; 0x7ce <mario_song+0x3a>
+ 7b8:	8d 30       	cpi	r24, 0x0D	; 13
+ 7ba:	19 f0       	breq	.+6      	; 0x7c2 <mario_song+0x2e>
+ 7bc:	8e 30       	cpi	r24, 0x0E	; 14
+ 7be:	49 f4       	brne	.+18     	; 0x7d2 <mario_song+0x3e>
+ 7c0:	02 c0       	rjmp	.+4      	; 0x7c6 <mario_song+0x32>
+ 7c2:	31 e0       	ldi	r19, 0x01	; 1
+ 7c4:	07 c0       	rjmp	.+14     	; 0x7d4 <mario_song+0x40>
+ 7c6:	30 e0       	ldi	r19, 0x00	; 0
+ 7c8:	05 c0       	rjmp	.+10     	; 0x7d4 <mario_song+0x40>
+ 7ca:	32 e0       	ldi	r19, 0x02	; 2
+ 7cc:	03 c0       	rjmp	.+6      	; 0x7d4 <mario_song+0x40>
+ 7ce:	33 e0       	ldi	r19, 0x03	; 3
+ 7d0:	01 c0       	rjmp	.+2      	; 0x7d4 <mario_song+0x40>
+ 7d2:	34 e0       	ldi	r19, 0x04	; 4
+	PORTA = 0x0F;
+    while(end!=3 && length!=OFF)
+    {
+        end = decode_switches( PINA );
+        if(length!=OFF){
+            note = pgm_read_byte(&mario[x][0]);
+ 7d4:	41 50       	subi	r20, 0x01	; 1
+ 7d6:	50 40       	sbci	r21, 0x00	; 0
+ 7d8:	e4 2f       	mov	r30, r20
+ 7da:	f5 2f       	mov	r31, r21
+ 7dc:	c8 95       	lpm
+ 7de:	80 2d       	mov	r24, r0
+ 7e0:	4f 5f       	subi	r20, 0xFF	; 255
+ 7e2:	5f 4f       	sbci	r21, 0xFF	; 255
+ 7e4:	80 93 60 00 	sts	0x0060, r24
+			if(note==C6)	PORTA |= 0xF0;
+ 7e8:	80 91 60 00 	lds	r24, 0x0060
+ 7ec:	85 3e       	cpi	r24, 0xE5	; 229
+ 7ee:	19 f4       	brne	.+6      	; 0x7f6 <mario_song+0x62>
+ 7f0:	8b b3       	in	r24, 0x1b	; 27
+ 7f2:	80 6f       	ori	r24, 0xF0	; 240
+ 7f4:	8b bb       	out	0x1b, r24	; 27
+			if(note==A5)	PORTA |= 0xE0;
+ 7f6:	80 91 60 00 	lds	r24, 0x0060
+ 7fa:	80 3e       	cpi	r24, 0xE0	; 224
+ 7fc:	19 f4       	brne	.+6      	; 0x804 <mario_song+0x70>
+ 7fe:	8b b3       	in	r24, 0x1b	; 27
+ 800:	80 6e       	ori	r24, 0xE0	; 224
+ 802:	8b bb       	out	0x1b, r24	; 27
+			if(note==G5)	PORTA |= 0xD0;
+ 804:	80 91 60 00 	lds	r24, 0x0060
+ 808:	8c 3d       	cpi	r24, 0xDC	; 220
+ 80a:	19 f4       	brne	.+6      	; 0x812 <mario_song+0x7e>
+ 80c:	8b b3       	in	r24, 0x1b	; 27
+ 80e:	80 6d       	ori	r24, 0xD0	; 208
+ 810:	8b bb       	out	0x1b, r24	; 27
+			if(note==FS5)	PORTA |= 0xC0;
+ 812:	80 91 60 00 	lds	r24, 0x0060
+ 816:	8a 3d       	cpi	r24, 0xDA	; 218
+ 818:	19 f4       	brne	.+6      	; 0x820 <mario_song+0x8c>
+ 81a:	8b b3       	in	r24, 0x1b	; 27
+ 81c:	80 6c       	ori	r24, 0xC0	; 192
+ 81e:	8b bb       	out	0x1b, r24	; 27
+			if(note==F5)	PORTA |= 0xB0;
+ 820:	80 91 60 00 	lds	r24, 0x0060
+ 824:	88 3d       	cpi	r24, 0xD8	; 216
+ 826:	19 f4       	brne	.+6      	; 0x82e <mario_song+0x9a>
+ 828:	8b b3       	in	r24, 0x1b	; 27
+ 82a:	80 6b       	ori	r24, 0xB0	; 176
+ 82c:	8b bb       	out	0x1b, r24	; 27
+			if(note==E5)	PORTA |= 0xA0;
+ 82e:	80 91 60 00 	lds	r24, 0x0060
+ 832:	86 3d       	cpi	r24, 0xD6	; 214
+ 834:	19 f4       	brne	.+6      	; 0x83c <mario_song+0xa8>
+ 836:	8b b3       	in	r24, 0x1b	; 27
+ 838:	80 6a       	ori	r24, 0xA0	; 160
+ 83a:	8b bb       	out	0x1b, r24	; 27
+			if(note==DS5)	PORTA |= 0xB0;
+ 83c:	80 91 60 00 	lds	r24, 0x0060
+ 840:	83 3d       	cpi	r24, 0xD3	; 211
+ 842:	19 f4       	brne	.+6      	; 0x84a <mario_song+0xb6>
+ 844:	8b b3       	in	r24, 0x1b	; 27
+ 846:	80 6b       	ori	r24, 0xB0	; 176
+ 848:	8b bb       	out	0x1b, r24	; 27
+			if(note==D5)	PORTA |= 0xA0;
+ 84a:	80 91 60 00 	lds	r24, 0x0060
+ 84e:	80 3d       	cpi	r24, 0xD0	; 208
+ 850:	19 f4       	brne	.+6      	; 0x858 <mario_song+0xc4>
+ 852:	8b b3       	in	r24, 0x1b	; 27
+ 854:	80 6a       	ori	r24, 0xA0	; 160
+ 856:	8b bb       	out	0x1b, r24	; 27
+			if(note==C5)	PORTA |= 0x90;
+ 858:	80 91 60 00 	lds	r24, 0x0060
+ 85c:	8b 3c       	cpi	r24, 0xCB	; 203
+ 85e:	19 f4       	brne	.+6      	; 0x866 <mario_song+0xd2>
+ 860:	8b b3       	in	r24, 0x1b	; 27
+ 862:	80 69       	ori	r24, 0x90	; 144
+ 864:	8b bb       	out	0x1b, r24	; 27
+			if(note==B4)	PORTA |= 0x80;
+ 866:	80 91 60 00 	lds	r24, 0x0060
+ 86a:	87 3c       	cpi	r24, 0xC7	; 199
+ 86c:	09 f4       	brne	.+2      	; 0x870 <mario_song+0xdc>
+ 86e:	df 9a       	sbi	0x1b, 7	; 27
+			if(note==AS4)	PORTA |= 0x70;
+ 870:	80 91 60 00 	lds	r24, 0x0060
+ 874:	84 3c       	cpi	r24, 0xC4	; 196
+ 876:	19 f4       	brne	.+6      	; 0x87e <mario_song+0xea>
+ 878:	8b b3       	in	r24, 0x1b	; 27
+ 87a:	80 67       	ori	r24, 0x70	; 112
+ 87c:	8b bb       	out	0x1b, r24	; 27
+			if(note==A4)	PORTA |= 0x60;
+ 87e:	80 91 60 00 	lds	r24, 0x0060
+ 882:	80 3c       	cpi	r24, 0xC0	; 192
+ 884:	19 f4       	brne	.+6      	; 0x88c <mario_song+0xf8>
+ 886:	8b b3       	in	r24, 0x1b	; 27
+ 888:	80 66       	ori	r24, 0x60	; 96
+ 88a:	8b bb       	out	0x1b, r24	; 27
+			if(note==GS4)	PORTA |= 0x50;
+ 88c:	80 91 60 00 	lds	r24, 0x0060
+ 890:	8d 3b       	cpi	r24, 0xBD	; 189
+ 892:	19 f4       	brne	.+6      	; 0x89a <mario_song+0x106>
+ 894:	8b b3       	in	r24, 0x1b	; 27
+ 896:	80 65       	ori	r24, 0x50	; 80
+ 898:	8b bb       	out	0x1b, r24	; 27
+			if(note==G4)	PORTA |= 0x40;
+ 89a:	80 91 60 00 	lds	r24, 0x0060
+ 89e:	89 3b       	cpi	r24, 0xB9	; 185
+ 8a0:	09 f4       	brne	.+2      	; 0x8a4 <mario_song+0x110>
+ 8a2:	de 9a       	sbi	0x1b, 6	; 27
+			if(note==E4)	PORTA |= 0x30;
+ 8a4:	80 91 60 00 	lds	r24, 0x0060
+ 8a8:	8b 3a       	cpi	r24, 0xAB	; 171
+ 8aa:	19 f4       	brne	.+6      	; 0x8b2 <mario_song+0x11e>
+ 8ac:	8b b3       	in	r24, 0x1b	; 27
+ 8ae:	80 63       	ori	r24, 0x30	; 48
+ 8b0:	8b bb       	out	0x1b, r24	; 27
+			if(note==D4)	PORTA |= 0x20;
+ 8b2:	80 91 60 00 	lds	r24, 0x0060
+ 8b6:	81 3a       	cpi	r24, 0xA1	; 161
+ 8b8:	09 f4       	brne	.+2      	; 0x8bc <mario_song+0x128>
+ 8ba:	dd 9a       	sbi	0x1b, 5	; 27
+			if(note==C4)	PORTA |= 0x10;
+ 8bc:	80 91 60 00 	lds	r24, 0x0060
+ 8c0:	85 39       	cpi	r24, 0x95	; 149
+ 8c2:	09 f4       	brne	.+2      	; 0x8c6 <mario_song+0x132>
+ 8c4:	dc 9a       	sbi	0x1b, 4	; 27
+            length = pgm_read_byte(&mario[x][1]);
+ 8c6:	e4 2f       	mov	r30, r20
+ 8c8:	f5 2f       	mov	r31, r21
+ 8ca:	c8 95       	lpm
+ 8cc:	20 2d       	mov	r18, r0
+            if(length==1) 	_delay_ms(2400);
+ 8ce:	21 30       	cpi	r18, 0x01	; 1
+ 8d0:	49 f4       	brne	.+18     	; 0x8e4 <mario_song+0x150>
+ 8d2:	80 ec       	ldi	r24, 0xC0	; 192
+ 8d4:	9d e5       	ldi	r25, 0x5D	; 93
+ 8d6:	e6 2f       	mov	r30, r22
+ 8d8:	f7 2f       	mov	r31, r23
+ 8da:	31 97       	sbiw	r30, 0x01	; 1
+ 8dc:	f1 f7       	brne	.-4      	; 0x8da <mario_song+0x146>
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+ 8de:	01 97       	sbiw	r24, 0x01	; 1
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+ 8e0:	d1 f7       	brne	.-12     	; 0x8d6 <mario_song+0x142>
+ 8e2:	69 c0       	rjmp	.+210    	; 0x9b6 <mario_song+0x222>
+			if(length==28)	_delay_ms(1500);
+ 8e4:	2c 31       	cpi	r18, 0x1C	; 28
+ 8e6:	49 f4       	brne	.+18     	; 0x8fa <mario_song+0x166>
+ 8e8:	88 e9       	ldi	r24, 0x98	; 152
+ 8ea:	9a e3       	ldi	r25, 0x3A	; 58
+ 8ec:	e6 2f       	mov	r30, r22
+ 8ee:	f7 2f       	mov	r31, r23
+ 8f0:	31 97       	sbiw	r30, 0x01	; 1
+ 8f2:	f1 f7       	brne	.-4      	; 0x8f0 <mario_song+0x15c>
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+ 8f4:	01 97       	sbiw	r24, 0x01	; 1
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+ 8f6:	d1 f7       	brne	.-12     	; 0x8ec <mario_song+0x158>
+ 8f8:	5e c0       	rjmp	.+188    	; 0x9b6 <mario_song+0x222>
+			if(length==2) 	_delay_ms(1200);
+ 8fa:	22 30       	cpi	r18, 0x02	; 2
+ 8fc:	49 f4       	brne	.+18     	; 0x910 <mario_song+0x17c>
+ 8fe:	80 ee       	ldi	r24, 0xE0	; 224
+ 900:	9e e2       	ldi	r25, 0x2E	; 46
+ 902:	e6 2f       	mov	r30, r22
+ 904:	f7 2f       	mov	r31, r23
+ 906:	31 97       	sbiw	r30, 0x01	; 1
+ 908:	f1 f7       	brne	.-4      	; 0x906 <mario_song+0x172>
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+ 90a:	01 97       	sbiw	r24, 0x01	; 1
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+ 90c:	d1 f7       	brne	.-12     	; 0x902 <mario_song+0x16e>
+ 90e:	53 c0       	rjmp	.+166    	; 0x9b6 <mario_song+0x222>
+			if(length==42)	_delay_ms(900);
+ 910:	2a 32       	cpi	r18, 0x2A	; 42
+ 912:	49 f4       	brne	.+18     	; 0x926 <mario_song+0x192>
+ 914:	88 e2       	ldi	r24, 0x28	; 40
+ 916:	93 e2       	ldi	r25, 0x23	; 35
+ 918:	e6 2f       	mov	r30, r22
+ 91a:	f7 2f       	mov	r31, r23
+ 91c:	31 97       	sbiw	r30, 0x01	; 1
+ 91e:	f1 f7       	brne	.-4      	; 0x91c <mario_song+0x188>
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+ 920:	01 97       	sbiw	r24, 0x01	; 1
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+ 922:	d1 f7       	brne	.-12     	; 0x918 <mario_song+0x184>
+ 924:	48 c0       	rjmp	.+144    	; 0x9b6 <mario_song+0x222>
+			if(length==4) 	_delay_ms(600);
+ 926:	24 30       	cpi	r18, 0x04	; 4
+ 928:	49 f4       	brne	.+18     	; 0x93c <mario_song+0x1a8>
+ 92a:	80 e7       	ldi	r24, 0x70	; 112
+ 92c:	97 e1       	ldi	r25, 0x17	; 23
+ 92e:	e6 2f       	mov	r30, r22
+ 930:	f7 2f       	mov	r31, r23
+ 932:	31 97       	sbiw	r30, 0x01	; 1
+ 934:	f1 f7       	brne	.-4      	; 0x932 <mario_song+0x19e>
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+ 936:	01 97       	sbiw	r24, 0x01	; 1
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+ 938:	d1 f7       	brne	.-12     	; 0x92e <mario_song+0x19a>
+ 93a:	3d c0       	rjmp	.+122    	; 0x9b6 <mario_song+0x222>
+			if(length==8) 	_delay_ms(300);
+ 93c:	28 30       	cpi	r18, 0x08	; 8
+ 93e:	49 f4       	brne	.+18     	; 0x952 <mario_song+0x1be>
+ 940:	88 eb       	ldi	r24, 0xB8	; 184
+ 942:	9b e0       	ldi	r25, 0x0B	; 11
+ 944:	e6 2f       	mov	r30, r22
+ 946:	f7 2f       	mov	r31, r23
+ 948:	31 97       	sbiw	r30, 0x01	; 1
+ 94a:	f1 f7       	brne	.-4      	; 0x948 <mario_song+0x1b4>
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+ 94c:	01 97       	sbiw	r24, 0x01	; 1
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+ 94e:	d1 f7       	brne	.-12     	; 0x944 <mario_song+0x1b0>
+ 950:	32 c0       	rjmp	.+100    	; 0x9b6 <mario_song+0x222>
+			if(length==162)	_delay_ms(225);
+ 952:	22 3a       	cpi	r18, 0xA2	; 162
+ 954:	49 f4       	brne	.+18     	; 0x968 <mario_song+0x1d4>
+ 956:	8a ec       	ldi	r24, 0xCA	; 202
+ 958:	98 e0       	ldi	r25, 0x08	; 8
+ 95a:	e6 2f       	mov	r30, r22
+ 95c:	f7 2f       	mov	r31, r23
+ 95e:	31 97       	sbiw	r30, 0x01	; 1
+ 960:	f1 f7       	brne	.-4      	; 0x95e <mario_song+0x1ca>
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+ 962:	01 97       	sbiw	r24, 0x01	; 1
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+ 964:	d1 f7       	brne	.-12     	; 0x95a <mario_song+0x1c6>
+ 966:	27 c0       	rjmp	.+78     	; 0x9b6 <mario_song+0x222>
+			if(length==83)	_delay_ms(200);
+ 968:	23 35       	cpi	r18, 0x53	; 83
+ 96a:	49 f4       	brne	.+18     	; 0x97e <mario_song+0x1ea>
+ 96c:	80 ed       	ldi	r24, 0xD0	; 208
+ 96e:	97 e0       	ldi	r25, 0x07	; 7
+ 970:	e6 2f       	mov	r30, r22
+ 972:	f7 2f       	mov	r31, r23
+ 974:	31 97       	sbiw	r30, 0x01	; 1
+ 976:	f1 f7       	brne	.-4      	; 0x974 <mario_song+0x1e0>
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+ 978:	01 97       	sbiw	r24, 0x01	; 1
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+ 97a:	d1 f7       	brne	.-12     	; 0x970 <mario_song+0x1dc>
+ 97c:	1c c0       	rjmp	.+56     	; 0x9b6 <mario_song+0x222>
+			if(length==16)	_delay_ms(150);
+ 97e:	20 31       	cpi	r18, 0x10	; 16
+ 980:	49 f4       	brne	.+18     	; 0x994 <mario_song+0x200>
+ 982:	8c ed       	ldi	r24, 0xDC	; 220
+ 984:	95 e0       	ldi	r25, 0x05	; 5
+ 986:	e6 2f       	mov	r30, r22
+ 988:	f7 2f       	mov	r31, r23
+ 98a:	31 97       	sbiw	r30, 0x01	; 1
+ 98c:	f1 f7       	brne	.-4      	; 0x98a <mario_song+0x1f6>
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+ 98e:	01 97       	sbiw	r24, 0x01	; 1
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+ 990:	d1 f7       	brne	.-12     	; 0x986 <mario_song+0x1f2>
+ 992:	11 c0       	rjmp	.+34     	; 0x9b6 <mario_song+0x222>
+			if(length==32) 	_delay_ms(75);
+ 994:	20 32       	cpi	r18, 0x20	; 32
+ 996:	49 f4       	brne	.+18     	; 0x9aa <mario_song+0x216>
+ 998:	8e ee       	ldi	r24, 0xEE	; 238
+ 99a:	92 e0       	ldi	r25, 0x02	; 2
+ 99c:	e6 2f       	mov	r30, r22
+ 99e:	f7 2f       	mov	r31, r23
+ 9a0:	31 97       	sbiw	r30, 0x01	; 1
+ 9a2:	f1 f7       	brne	.-4      	; 0x9a0 <mario_song+0x20c>
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+ 9a4:	01 97       	sbiw	r24, 0x01	; 1
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+ 9a6:	d1 f7       	brne	.-12     	; 0x99c <mario_song+0x208>
+ 9a8:	06 c0       	rjmp	.+12     	; 0x9b6 <mario_song+0x222>
+			if(length==100)	_delay_ms(1);
+ 9aa:	24 36       	cpi	r18, 0x64	; 100
+ 9ac:	21 f4       	brne	.+8      	; 0x9b6 <mario_song+0x222>
+ 9ae:	8a 2f       	mov	r24, r26
+ 9b0:	9b 2f       	mov	r25, r27
+ 9b2:	01 97       	sbiw	r24, 0x01	; 1
+ 9b4:	f1 f7       	brne	.-4      	; 0x9b2 <mario_song+0x21e>
+			if(note!=OFF){ 
+ 9b6:	80 91 60 00 	lds	r24, 0x0060
+ 9ba:	8f 3f       	cpi	r24, 0xFF	; 255
+ 9bc:	49 f0       	breq	.+18     	; 0x9d0 <mario_song+0x23c>
+				note = OFF;
+ 9be:	10 93 60 00 	sts	0x0060, r17
+				PORTA &= 0x0F;
+ 9c2:	8b b3       	in	r24, 0x1b	; 27
+ 9c4:	8f 70       	andi	r24, 0x0F	; 15
+ 9c6:	8b bb       	out	0x1b, r24	; 27
+ 9c8:	8a 2f       	mov	r24, r26
+ 9ca:	9b 2f       	mov	r25, r27
+ 9cc:	01 97       	sbiw	r24, 0x01	; 1
+ 9ce:	f1 f7       	brne	.-4      	; 0x9cc <mario_song+0x238>
+{
+	int x=0;
+	unsigned char length=0;
+	unsigned char end=0;
+	PORTA = 0x0F;
+    while(end!=3 && length!=OFF)
+ 9d0:	33 30       	cpi	r19, 0x03	; 3
+ 9d2:	29 f0       	breq	.+10     	; 0x9de <mario_song+0x24a>
+ 9d4:	4e 5f       	subi	r20, 0xFE	; 254
+ 9d6:	5f 4f       	sbci	r21, 0xFF	; 255
+ 9d8:	2f 3f       	cpi	r18, 0xFF	; 255
+ 9da:	09 f0       	breq	.+2      	; 0x9de <mario_song+0x24a>
+ 9dc:	e5 ce       	rjmp	.-566    	; 0x7a8 <mario_song+0x14>
+			}
+            x++;
+        }
+    }
+	return 0;
+}
+ 9de:	80 e0       	ldi	r24, 0x00	; 0
+ 9e0:	90 e0       	ldi	r25, 0x00	; 0
+ 9e2:	1f 91       	pop	r17
+ 9e4:	08 95       	ret
+
+000009e6 <heartandsoul>:
+
+
+/* Plays Heart and Soul */
+int heartandsoul(void)
+{
+ 9e6:	1f 93       	push	r17
+ 9e8:	cf 93       	push	r28
+ 9ea:	df 93       	push	r29
+	unsigned char x=0;
+	unsigned char length=0,end=0;
+	PORTA = 0x0F;
+ 9ec:	8f e0       	ldi	r24, 0x0F	; 15
+ 9ee:	8b bb       	out	0x1b, r24	; 27
+ 9f0:	50 e0       	ldi	r21, 0x00	; 0
+ 9f2:	6c e5       	ldi	r22, 0x5C	; 92
+ 9f4:	70 e0       	ldi	r23, 0x00	; 0
+			if(length==2) 	_delay_ms(1000);
+			if(length==4) 	_delay_ms(500);
+			if(length==8) 	_delay_ms(250);
+			if(length==16)	_delay_ms(125);
+			if(note!=OFF){ 
+				note = OFF;
+ 9f6:	1f ef       	ldi	r17, 0xFF	; 255
+ 9f8:	c0 e0       	ldi	r28, 0x00	; 0
+ 9fa:	d2 e1       	ldi	r29, 0x12	; 18
+	unsigned char x=0;
+	unsigned char length=0,end=0;
+	PORTA = 0x0F;
+    while(end!=3 && length!=OFF)
+    {
+        end = decode_switches( PINA );
+ 9fc:	89 b3       	in	r24, 0x19	; 25
+
+
+/* Switch Decoding Function */
+unsigned char decode_switches(unsigned char x)
+{
+    switch(x){
+ 9fe:	8b 30       	cpi	r24, 0x0B	; 11
+ a00:	71 f0       	breq	.+28     	; 0xa1e <heartandsoul+0x38>
+ a02:	8c 30       	cpi	r24, 0x0C	; 12
+ a04:	18 f4       	brcc	.+6      	; 0xa0c <heartandsoul+0x26>
+ a06:	87 30       	cpi	r24, 0x07	; 7
+ a08:	71 f4       	brne	.+28     	; 0xa26 <heartandsoul+0x40>
+ a0a:	0b c0       	rjmp	.+22     	; 0xa22 <heartandsoul+0x3c>
+ a0c:	8d 30       	cpi	r24, 0x0D	; 13
+ a0e:	19 f0       	breq	.+6      	; 0xa16 <heartandsoul+0x30>
+ a10:	8e 30       	cpi	r24, 0x0E	; 14
+ a12:	49 f4       	brne	.+18     	; 0xa26 <heartandsoul+0x40>
+ a14:	02 c0       	rjmp	.+4      	; 0xa1a <heartandsoul+0x34>
+ a16:	41 e0       	ldi	r20, 0x01	; 1
+ a18:	07 c0       	rjmp	.+14     	; 0xa28 <heartandsoul+0x42>
+ a1a:	40 e0       	ldi	r20, 0x00	; 0
+ a1c:	05 c0       	rjmp	.+10     	; 0xa28 <heartandsoul+0x42>
+ a1e:	42 e0       	ldi	r20, 0x02	; 2
+ a20:	03 c0       	rjmp	.+6      	; 0xa28 <heartandsoul+0x42>
+ a22:	43 e0       	ldi	r20, 0x03	; 3
+ a24:	01 c0       	rjmp	.+2      	; 0xa28 <heartandsoul+0x42>
+ a26:	44 e0       	ldi	r20, 0x04	; 4
+	PORTA = 0x0F;
+    while(end!=3 && length!=OFF)
+    {
+        end = decode_switches( PINA );
+        if(length!=OFF){
+			note = pgm_read_byte(&heart_and_soul[x][0]);
+ a28:	25 2f       	mov	r18, r21
+ a2a:	30 e0       	ldi	r19, 0x00	; 0
+ a2c:	22 0f       	add	r18, r18
+ a2e:	33 1f       	adc	r19, r19
+ a30:	e2 2f       	mov	r30, r18
+ a32:	f3 2f       	mov	r31, r19
+ a34:	e3 59       	subi	r30, 0x93	; 147
+ a36:	fc 4f       	sbci	r31, 0xFC	; 252
+ a38:	c8 95       	lpm
+ a3a:	e0 2d       	mov	r30, r0
+ a3c:	e0 93 60 00 	sts	0x0060, r30
+			if(note==D5)	PORTA |= 0xF0;
+ a40:	80 91 60 00 	lds	r24, 0x0060
+ a44:	80 3d       	cpi	r24, 0xD0	; 208
+ a46:	19 f4       	brne	.+6      	; 0xa4e <heartandsoul+0x68>
+ a48:	8b b3       	in	r24, 0x1b	; 27
+ a4a:	80 6f       	ori	r24, 0xF0	; 240
+ a4c:	8b bb       	out	0x1b, r24	; 27
+			if(note==C5)	PORTA |= 0x30;
+ a4e:	80 91 60 00 	lds	r24, 0x0060
+ a52:	8b 3c       	cpi	r24, 0xCB	; 203
+ a54:	19 f4       	brne	.+6      	; 0xa5c <heartandsoul+0x76>
+ a56:	8b b3       	in	r24, 0x1b	; 27
+ a58:	80 63       	ori	r24, 0x30	; 48
+ a5a:	8b bb       	out	0x1b, r24	; 27
+			if(note==AS4)	PORTA |= 0x60;
+ a5c:	80 91 60 00 	lds	r24, 0x0060
+ a60:	84 3c       	cpi	r24, 0xC4	; 196
+ a62:	19 f4       	brne	.+6      	; 0xa6a <heartandsoul+0x84>
+ a64:	8b b3       	in	r24, 0x1b	; 27
+ a66:	80 66       	ori	r24, 0x60	; 96
+ a68:	8b bb       	out	0x1b, r24	; 27
+			if(note==A4)	PORTA |= 0x10;
+ a6a:	80 91 60 00 	lds	r24, 0x0060
+ a6e:	80 3c       	cpi	r24, 0xC0	; 192
+ a70:	09 f4       	brne	.+2      	; 0xa74 <heartandsoul+0x8e>
+ a72:	dc 9a       	sbi	0x1b, 4	; 27
+			if(note==G4)	PORTA |= 0x20;
+ a74:	80 91 60 00 	lds	r24, 0x0060
+ a78:	89 3b       	cpi	r24, 0xB9	; 185
+ a7a:	09 f4       	brne	.+2      	; 0xa7e <heartandsoul+0x98>
+ a7c:	dd 9a       	sbi	0x1b, 5	; 27
+			if(note==F4)	PORTA |= 0x40;
+ a7e:	80 91 60 00 	lds	r24, 0x0060
+ a82:	80 3b       	cpi	r24, 0xB0	; 176
+ a84:	09 f4       	brne	.+2      	; 0xa88 <heartandsoul+0xa2>
+ a86:	de 9a       	sbi	0x1b, 6	; 27
+			if(note==E4)	PORTA |= 0x80;
+ a88:	80 91 60 00 	lds	r24, 0x0060
+ a8c:	8b 3a       	cpi	r24, 0xAB	; 171
+ a8e:	09 f4       	brne	.+2      	; 0xa92 <heartandsoul+0xac>
+ a90:	df 9a       	sbi	0x1b, 7	; 27
+			if(note==D4)	PORTA |= 0xC0;
+ a92:	80 91 60 00 	lds	r24, 0x0060
+ a96:	81 3a       	cpi	r24, 0xA1	; 161
+ a98:	19 f4       	brne	.+6      	; 0xaa0 <heartandsoul+0xba>
+ a9a:	8b b3       	in	r24, 0x1b	; 27
+ a9c:	80 6c       	ori	r24, 0xC0	; 192
+ a9e:	8b bb       	out	0x1b, r24	; 27
+			length = pgm_read_byte(&heart_and_soul[x][1]);
+ aa0:	22 59       	subi	r18, 0x92	; 146
+ aa2:	3c 4f       	sbci	r19, 0xFC	; 252
+ aa4:	e2 2f       	mov	r30, r18
+ aa6:	f3 2f       	mov	r31, r19
+ aa8:	c8 95       	lpm
+ aaa:	20 2d       	mov	r18, r0
+			if(length==1) 	_delay_ms(2000);
+ aac:	21 30       	cpi	r18, 0x01	; 1
+ aae:	49 f4       	brne	.+18     	; 0xac2 <heartandsoul+0xdc>
+ ab0:	80 e2       	ldi	r24, 0x20	; 32
+ ab2:	9e e4       	ldi	r25, 0x4E	; 78
+ ab4:	a6 2f       	mov	r26, r22
+ ab6:	b7 2f       	mov	r27, r23
+ ab8:	11 97       	sbiw	r26, 0x01	; 1
+ aba:	f1 f7       	brne	.-4      	; 0xab8 <heartandsoul+0xd2>
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+ abc:	01 97       	sbiw	r24, 0x01	; 1
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+ abe:	d1 f7       	brne	.-12     	; 0xab4 <heartandsoul+0xce>
+ ac0:	36 c0       	rjmp	.+108    	; 0xb2e <heartandsoul+0x148>
+			if(length==28)	_delay_ms(1250);
+ ac2:	2c 31       	cpi	r18, 0x1C	; 28
+ ac4:	49 f4       	brne	.+18     	; 0xad8 <heartandsoul+0xf2>
+ ac6:	84 ed       	ldi	r24, 0xD4	; 212
+ ac8:	90 e3       	ldi	r25, 0x30	; 48
+ aca:	a6 2f       	mov	r26, r22
+ acc:	b7 2f       	mov	r27, r23
+ ace:	11 97       	sbiw	r26, 0x01	; 1
+ ad0:	f1 f7       	brne	.-4      	; 0xace <heartandsoul+0xe8>
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+ ad2:	01 97       	sbiw	r24, 0x01	; 1
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+ ad4:	d1 f7       	brne	.-12     	; 0xaca <heartandsoul+0xe4>
+ ad6:	2b c0       	rjmp	.+86     	; 0xb2e <heartandsoul+0x148>
+			if(length==2) 	_delay_ms(1000);
+ ad8:	22 30       	cpi	r18, 0x02	; 2
+ ada:	49 f4       	brne	.+18     	; 0xaee <heartandsoul+0x108>
+ adc:	80 e1       	ldi	r24, 0x10	; 16
+ ade:	97 e2       	ldi	r25, 0x27	; 39
+ ae0:	a6 2f       	mov	r26, r22
+ ae2:	b7 2f       	mov	r27, r23
+ ae4:	11 97       	sbiw	r26, 0x01	; 1
+ ae6:	f1 f7       	brne	.-4      	; 0xae4 <heartandsoul+0xfe>
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+ ae8:	01 97       	sbiw	r24, 0x01	; 1
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+ aea:	d1 f7       	brne	.-12     	; 0xae0 <heartandsoul+0xfa>
+ aec:	20 c0       	rjmp	.+64     	; 0xb2e <heartandsoul+0x148>
+			if(length==4) 	_delay_ms(500);
+ aee:	24 30       	cpi	r18, 0x04	; 4
+ af0:	49 f4       	brne	.+18     	; 0xb04 <heartandsoul+0x11e>
+ af2:	88 e8       	ldi	r24, 0x88	; 136
+ af4:	93 e1       	ldi	r25, 0x13	; 19
+ af6:	a6 2f       	mov	r26, r22
+ af8:	b7 2f       	mov	r27, r23
+ afa:	11 97       	sbiw	r26, 0x01	; 1
+ afc:	f1 f7       	brne	.-4      	; 0xafa <heartandsoul+0x114>
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+ afe:	01 97       	sbiw	r24, 0x01	; 1
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+ b00:	d1 f7       	brne	.-12     	; 0xaf6 <heartandsoul+0x110>
+ b02:	15 c0       	rjmp	.+42     	; 0xb2e <heartandsoul+0x148>
+			if(length==8) 	_delay_ms(250);
+ b04:	28 30       	cpi	r18, 0x08	; 8
+ b06:	49 f4       	brne	.+18     	; 0xb1a <heartandsoul+0x134>
+ b08:	84 ec       	ldi	r24, 0xC4	; 196
+ b0a:	99 e0       	ldi	r25, 0x09	; 9
+ b0c:	a6 2f       	mov	r26, r22
+ b0e:	b7 2f       	mov	r27, r23
+ b10:	11 97       	sbiw	r26, 0x01	; 1
+ b12:	f1 f7       	brne	.-4      	; 0xb10 <heartandsoul+0x12a>
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+ b14:	01 97       	sbiw	r24, 0x01	; 1
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+ b16:	d1 f7       	brne	.-12     	; 0xb0c <heartandsoul+0x126>
+ b18:	0a c0       	rjmp	.+20     	; 0xb2e <heartandsoul+0x148>
+			if(length==16)	_delay_ms(125);
+ b1a:	20 31       	cpi	r18, 0x10	; 16
+ b1c:	41 f4       	brne	.+16     	; 0xb2e <heartandsoul+0x148>
+ b1e:	82 ee       	ldi	r24, 0xE2	; 226
+ b20:	94 e0       	ldi	r25, 0x04	; 4
+ b22:	a6 2f       	mov	r26, r22
+ b24:	b7 2f       	mov	r27, r23
+ b26:	11 97       	sbiw	r26, 0x01	; 1
+ b28:	f1 f7       	brne	.-4      	; 0xb26 <heartandsoul+0x140>
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+ b2a:	01 97       	sbiw	r24, 0x01	; 1
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+ b2c:	d1 f7       	brne	.-12     	; 0xb22 <heartandsoul+0x13c>
+			if(note!=OFF){ 
+ b2e:	80 91 60 00 	lds	r24, 0x0060
+ b32:	8f 3f       	cpi	r24, 0xFF	; 255
+ b34:	49 f0       	breq	.+18     	; 0xb48 <heartandsoul+0x162>
+				note = OFF;
+ b36:	10 93 60 00 	sts	0x0060, r17
+				PORTA &= 0x0F;
+ b3a:	8b b3       	in	r24, 0x1b	; 27
+ b3c:	8f 70       	andi	r24, 0x0F	; 15
+ b3e:	8b bb       	out	0x1b, r24	; 27
+ b40:	8c 2f       	mov	r24, r28
+ b42:	9d 2f       	mov	r25, r29
+ b44:	01 97       	sbiw	r24, 0x01	; 1
+ b46:	f1 f7       	brne	.-4      	; 0xb44 <heartandsoul+0x15e>
+int heartandsoul(void)
+{
+	unsigned char x=0;
+	unsigned char length=0,end=0;
+	PORTA = 0x0F;
+    while(end!=3 && length!=OFF)
+ b48:	43 30       	cpi	r20, 0x03	; 3
+ b4a:	21 f0       	breq	.+8      	; 0xb54 <heartandsoul+0x16e>
+ b4c:	2f 3f       	cpi	r18, 0xFF	; 255
+ b4e:	11 f0       	breq	.+4      	; 0xb54 <heartandsoul+0x16e>
+			if(note!=OFF){ 
+				note = OFF;
+				PORTA &= 0x0F;
+				_delay_ms(5);
+			}
+            x++;
+ b50:	5f 5f       	subi	r21, 0xFF	; 255
+ b52:	54 cf       	rjmp	.-344    	; 0x9fc <heartandsoul+0x16>
+        }
+    }
+	PORTA = 0x0F;
+ b54:	8f e0       	ldi	r24, 0x0F	; 15
+ b56:	8b bb       	out	0x1b, r24	; 27
+	return 0;
+}
+ b58:	80 e0       	ldi	r24, 0x00	; 0
+ b5a:	90 e0       	ldi	r25, 0x00	; 0
+ b5c:	df 91       	pop	r29
+ b5e:	cf 91       	pop	r28
+ b60:	1f 91       	pop	r17
+ b62:	08 95       	ret
+
+00000b64 <jinglebells>:
+
+
+/* Plays Jingle Bells */
+int jinglebells(void)
+{
+ b64:	1f 93       	push	r17
+ b66:	cf 93       	push	r28
+ b68:	df 93       	push	r29
+	unsigned char x=0;
+	unsigned char length=0,end=0;
+	PORTA = 0x0F;
+ b6a:	8f e0       	ldi	r24, 0x0F	; 15
+ b6c:	8b bb       	out	0x1b, r24	; 27
+ b6e:	70 e0       	ldi	r23, 0x00	; 0
+ b70:	4c e5       	ldi	r20, 0x5C	; 92
+ b72:	50 e0       	ldi	r21, 0x00	; 0
+			if(length==4) 	_delay_ms(500);
+			if(length==82)	_delay_ms(375);
+			if(length==8) 	_delay_ms(250);
+			if(length==16)	_delay_ms(125);
+			if(note!=OFF){ 
+				note = OFF;
+ b74:	1f ef       	ldi	r17, 0xFF	; 255
+ b76:	c0 e0       	ldi	r28, 0x00	; 0
+ b78:	d2 e1       	ldi	r29, 0x12	; 18
+	unsigned char x=0;
+	unsigned char length=0,end=0;
+	PORTA = 0x0F;
+    while(end!=3 && length!=OFF)
+    {
+        end = decode_switches( PINA );
+ b7a:	89 b3       	in	r24, 0x19	; 25
+
+
+/* Switch Decoding Function */
+unsigned char decode_switches(unsigned char x)
+{
+    switch(x){
+ b7c:	8b 30       	cpi	r24, 0x0B	; 11
+ b7e:	71 f0       	breq	.+28     	; 0xb9c <jinglebells+0x38>
+ b80:	8c 30       	cpi	r24, 0x0C	; 12
+ b82:	18 f4       	brcc	.+6      	; 0xb8a <jinglebells+0x26>
+ b84:	87 30       	cpi	r24, 0x07	; 7
+ b86:	71 f4       	brne	.+28     	; 0xba4 <jinglebells+0x40>
+ b88:	0b c0       	rjmp	.+22     	; 0xba0 <jinglebells+0x3c>
+ b8a:	8d 30       	cpi	r24, 0x0D	; 13
+ b8c:	19 f0       	breq	.+6      	; 0xb94 <jinglebells+0x30>
+ b8e:	8e 30       	cpi	r24, 0x0E	; 14
+ b90:	49 f4       	brne	.+18     	; 0xba4 <jinglebells+0x40>
+ b92:	02 c0       	rjmp	.+4      	; 0xb98 <jinglebells+0x34>
+ b94:	61 e0       	ldi	r22, 0x01	; 1
+ b96:	07 c0       	rjmp	.+14     	; 0xba6 <jinglebells+0x42>
+ b98:	60 e0       	ldi	r22, 0x00	; 0
+ b9a:	05 c0       	rjmp	.+10     	; 0xba6 <jinglebells+0x42>
+ b9c:	62 e0       	ldi	r22, 0x02	; 2
+ b9e:	03 c0       	rjmp	.+6      	; 0xba6 <jinglebells+0x42>
+ ba0:	63 e0       	ldi	r22, 0x03	; 3
+ ba2:	01 c0       	rjmp	.+2      	; 0xba6 <jinglebells+0x42>
+ ba4:	64 e0       	ldi	r22, 0x04	; 4
+	PORTA = 0x0F;
+    while(end!=3 && length!=OFF)
+    {
+        end = decode_switches( PINA );
+        if(length!=OFF){
+			note = pgm_read_byte(&jingle_bells[x][0]);
+ ba6:	27 2f       	mov	r18, r23
+ ba8:	30 e0       	ldi	r19, 0x00	; 0
+ baa:	22 0f       	add	r18, r18
+ bac:	33 1f       	adc	r19, r19
+ bae:	e2 2f       	mov	r30, r18
+ bb0:	f3 2f       	mov	r31, r19
+ bb2:	e1 51       	subi	r30, 0x11	; 17
+ bb4:	fc 4f       	sbci	r31, 0xFC	; 252
+ bb6:	c8 95       	lpm
+ bb8:	e0 2d       	mov	r30, r0
+ bba:	e0 93 60 00 	sts	0x0060, r30
+			if(note==E5)	PORTA |= 0xF0;
+ bbe:	80 91 60 00 	lds	r24, 0x0060
+ bc2:	86 3d       	cpi	r24, 0xD6	; 214
+ bc4:	19 f4       	brne	.+6      	; 0xbcc <jinglebells+0x68>
+ bc6:	8b b3       	in	r24, 0x1b	; 27
+ bc8:	80 6f       	ori	r24, 0xF0	; 240
+ bca:	8b bb       	out	0x1b, r24	; 27
+			if(note==D5)	PORTA |= 0x30;
+ bcc:	80 91 60 00 	lds	r24, 0x0060
+ bd0:	80 3d       	cpi	r24, 0xD0	; 208
+ bd2:	19 f4       	brne	.+6      	; 0xbda <jinglebells+0x76>
+ bd4:	8b b3       	in	r24, 0x1b	; 27
+ bd6:	80 63       	ori	r24, 0x30	; 48
+ bd8:	8b bb       	out	0x1b, r24	; 27
+			if(note==C5)	PORTA |= 0x10;
+ bda:	80 91 60 00 	lds	r24, 0x0060
+ bde:	8b 3c       	cpi	r24, 0xCB	; 203
+ be0:	09 f4       	brne	.+2      	; 0xbe4 <jinglebells+0x80>
+ be2:	dc 9a       	sbi	0x1b, 4	; 27
+			if(note==B4)	PORTA |= 0x20;
+ be4:	80 91 60 00 	lds	r24, 0x0060
+ be8:	87 3c       	cpi	r24, 0xC7	; 199
+ bea:	09 f4       	brne	.+2      	; 0xbee <jinglebells+0x8a>
+ bec:	dd 9a       	sbi	0x1b, 5	; 27
+			if(note==A4)	PORTA |= 0x60;
+ bee:	80 91 60 00 	lds	r24, 0x0060
+ bf2:	80 3c       	cpi	r24, 0xC0	; 192
+ bf4:	19 f4       	brne	.+6      	; 0xbfc <jinglebells+0x98>
+ bf6:	8b b3       	in	r24, 0x1b	; 27
+ bf8:	80 66       	ori	r24, 0x60	; 96
+ bfa:	8b bb       	out	0x1b, r24	; 27
+			if(note==G4)	PORTA |= 0x40;
+ bfc:	80 91 60 00 	lds	r24, 0x0060
+ c00:	89 3b       	cpi	r24, 0xB9	; 185
+ c02:	09 f4       	brne	.+2      	; 0xc06 <jinglebells+0xa2>
+ c04:	de 9a       	sbi	0x1b, 6	; 27
+			if(note==FS4)	PORTA |= 0x80;
+ c06:	80 91 60 00 	lds	r24, 0x0060
+ c0a:	84 3b       	cpi	r24, 0xB4	; 180
+ c0c:	09 f4       	brne	.+2      	; 0xc10 <jinglebells+0xac>
+ c0e:	df 9a       	sbi	0x1b, 7	; 27
+			if(note==E4)	PORTA |= 0xC0;
+ c10:	80 91 60 00 	lds	r24, 0x0060
+ c14:	8b 3a       	cpi	r24, 0xAB	; 171
+ c16:	19 f4       	brne	.+6      	; 0xc1e <jinglebells+0xba>
+ c18:	8b b3       	in	r24, 0x1b	; 27
+ c1a:	80 6c       	ori	r24, 0xC0	; 192
+ c1c:	8b bb       	out	0x1b, r24	; 27
+			if(note==D4)	PORTA |= 0xE0;
+ c1e:	80 91 60 00 	lds	r24, 0x0060
+ c22:	81 3a       	cpi	r24, 0xA1	; 161
+ c24:	19 f4       	brne	.+6      	; 0xc2c <jinglebells+0xc8>
+ c26:	8b b3       	in	r24, 0x1b	; 27
+ c28:	80 6e       	ori	r24, 0xE0	; 224
+ c2a:	8b bb       	out	0x1b, r24	; 27
+			length = pgm_read_byte(&jingle_bells[x][1]);
+ c2c:	20 51       	subi	r18, 0x10	; 16
+ c2e:	3c 4f       	sbci	r19, 0xFC	; 252
+ c30:	e2 2f       	mov	r30, r18
+ c32:	f3 2f       	mov	r31, r19
+ c34:	c8 95       	lpm
+ c36:	20 2d       	mov	r18, r0
+			if(length==1) 	_delay_ms(2000);
+ c38:	21 30       	cpi	r18, 0x01	; 1
+ c3a:	49 f4       	brne	.+18     	; 0xc4e <jinglebells+0xea>
+ c3c:	80 e2       	ldi	r24, 0x20	; 32
+ c3e:	9e e4       	ldi	r25, 0x4E	; 78
+ c40:	a4 2f       	mov	r26, r20
+ c42:	b5 2f       	mov	r27, r21
+ c44:	11 97       	sbiw	r26, 0x01	; 1
+ c46:	f1 f7       	brne	.-4      	; 0xc44 <jinglebells+0xe0>
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+ c48:	01 97       	sbiw	r24, 0x01	; 1
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+ c4a:	d1 f7       	brne	.-12     	; 0xc40 <jinglebells+0xdc>
+ c4c:	41 c0       	rjmp	.+130    	; 0xcd0 <jinglebells+0x16c>
+			if(length==2) 	_delay_ms(1000);
+ c4e:	22 30       	cpi	r18, 0x02	; 2
+ c50:	49 f4       	brne	.+18     	; 0xc64 <jinglebells+0x100>
+ c52:	80 e1       	ldi	r24, 0x10	; 16
+ c54:	97 e2       	ldi	r25, 0x27	; 39
+ c56:	a4 2f       	mov	r26, r20
+ c58:	b5 2f       	mov	r27, r21
+ c5a:	11 97       	sbiw	r26, 0x01	; 1
+ c5c:	f1 f7       	brne	.-4      	; 0xc5a <jinglebells+0xf6>
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+ c5e:	01 97       	sbiw	r24, 0x01	; 1
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+ c60:	d1 f7       	brne	.-12     	; 0xc56 <jinglebells+0xf2>
+ c62:	36 c0       	rjmp	.+108    	; 0xcd0 <jinglebells+0x16c>
+			if(length==42)	_delay_ms(750);
+ c64:	2a 32       	cpi	r18, 0x2A	; 42
+ c66:	49 f4       	brne	.+18     	; 0xc7a <jinglebells+0x116>
+ c68:	8c e4       	ldi	r24, 0x4C	; 76
+ c6a:	9d e1       	ldi	r25, 0x1D	; 29
+ c6c:	a4 2f       	mov	r26, r20
+ c6e:	b5 2f       	mov	r27, r21
+ c70:	11 97       	sbiw	r26, 0x01	; 1
+ c72:	f1 f7       	brne	.-4      	; 0xc70 <jinglebells+0x10c>
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+ c74:	01 97       	sbiw	r24, 0x01	; 1
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+ c76:	d1 f7       	brne	.-12     	; 0xc6c <jinglebells+0x108>
+ c78:	2b c0       	rjmp	.+86     	; 0xcd0 <jinglebells+0x16c>
+			if(length==4) 	_delay_ms(500);
+ c7a:	24 30       	cpi	r18, 0x04	; 4
+ c7c:	49 f4       	brne	.+18     	; 0xc90 <jinglebells+0x12c>
+ c7e:	88 e8       	ldi	r24, 0x88	; 136
+ c80:	93 e1       	ldi	r25, 0x13	; 19
+ c82:	a4 2f       	mov	r26, r20
+ c84:	b5 2f       	mov	r27, r21
+ c86:	11 97       	sbiw	r26, 0x01	; 1
+ c88:	f1 f7       	brne	.-4      	; 0xc86 <jinglebells+0x122>
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+ c8a:	01 97       	sbiw	r24, 0x01	; 1
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+ c8c:	d1 f7       	brne	.-12     	; 0xc82 <jinglebells+0x11e>
+ c8e:	20 c0       	rjmp	.+64     	; 0xcd0 <jinglebells+0x16c>
+			if(length==82)	_delay_ms(375);
+ c90:	22 35       	cpi	r18, 0x52	; 82
+ c92:	49 f4       	brne	.+18     	; 0xca6 <jinglebells+0x142>
+ c94:	86 ea       	ldi	r24, 0xA6	; 166
+ c96:	9e e0       	ldi	r25, 0x0E	; 14
+ c98:	a4 2f       	mov	r26, r20
+ c9a:	b5 2f       	mov	r27, r21
+ c9c:	11 97       	sbiw	r26, 0x01	; 1
+ c9e:	f1 f7       	brne	.-4      	; 0xc9c <jinglebells+0x138>
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+ ca0:	01 97       	sbiw	r24, 0x01	; 1
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+ ca2:	d1 f7       	brne	.-12     	; 0xc98 <jinglebells+0x134>
+ ca4:	15 c0       	rjmp	.+42     	; 0xcd0 <jinglebells+0x16c>
+			if(length==8) 	_delay_ms(250);
+ ca6:	28 30       	cpi	r18, 0x08	; 8
+ ca8:	49 f4       	brne	.+18     	; 0xcbc <jinglebells+0x158>
+ caa:	84 ec       	ldi	r24, 0xC4	; 196
+ cac:	99 e0       	ldi	r25, 0x09	; 9
+ cae:	a4 2f       	mov	r26, r20
+ cb0:	b5 2f       	mov	r27, r21
+ cb2:	11 97       	sbiw	r26, 0x01	; 1
+ cb4:	f1 f7       	brne	.-4      	; 0xcb2 <jinglebells+0x14e>
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+ cb6:	01 97       	sbiw	r24, 0x01	; 1
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+ cb8:	d1 f7       	brne	.-12     	; 0xcae <jinglebells+0x14a>
+ cba:	0a c0       	rjmp	.+20     	; 0xcd0 <jinglebells+0x16c>
+			if(length==16)	_delay_ms(125);
+ cbc:	20 31       	cpi	r18, 0x10	; 16
+ cbe:	41 f4       	brne	.+16     	; 0xcd0 <jinglebells+0x16c>
+ cc0:	82 ee       	ldi	r24, 0xE2	; 226
+ cc2:	94 e0       	ldi	r25, 0x04	; 4
+ cc4:	a4 2f       	mov	r26, r20
+ cc6:	b5 2f       	mov	r27, r21
+ cc8:	11 97       	sbiw	r26, 0x01	; 1
+ cca:	f1 f7       	brne	.-4      	; 0xcc8 <jinglebells+0x164>
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+ ccc:	01 97       	sbiw	r24, 0x01	; 1
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+ cce:	d1 f7       	brne	.-12     	; 0xcc4 <jinglebells+0x160>
+			if(note!=OFF){ 
+ cd0:	80 91 60 00 	lds	r24, 0x0060
+ cd4:	8f 3f       	cpi	r24, 0xFF	; 255
+ cd6:	49 f0       	breq	.+18     	; 0xcea <jinglebells+0x186>
+				note = OFF;
+ cd8:	10 93 60 00 	sts	0x0060, r17
+				PORTA &= 0x0F;
+ cdc:	8b b3       	in	r24, 0x1b	; 27
+ cde:	8f 70       	andi	r24, 0x0F	; 15
+ ce0:	8b bb       	out	0x1b, r24	; 27
+ ce2:	8c 2f       	mov	r24, r28
+ ce4:	9d 2f       	mov	r25, r29
+ ce6:	01 97       	sbiw	r24, 0x01	; 1
+ ce8:	f1 f7       	brne	.-4      	; 0xce6 <jinglebells+0x182>
+int jinglebells(void)
+{
+	unsigned char x=0;
+	unsigned char length=0,end=0;
+	PORTA = 0x0F;
+    while(end!=3 && length!=OFF)
+ cea:	63 30       	cpi	r22, 0x03	; 3
+ cec:	21 f0       	breq	.+8      	; 0xcf6 <jinglebells+0x192>
+ cee:	2f 3f       	cpi	r18, 0xFF	; 255
+ cf0:	11 f0       	breq	.+4      	; 0xcf6 <jinglebells+0x192>
+			if(note!=OFF){ 
+				note = OFF;
+				PORTA &= 0x0F;
+				_delay_ms(5);
+			}
+            x++;
+ cf2:	7f 5f       	subi	r23, 0xFF	; 255
+ cf4:	42 cf       	rjmp	.-380    	; 0xb7a <jinglebells+0x16>
+        }
+    }
+	return 0;
+}
+ cf6:	80 e0       	ldi	r24, 0x00	; 0
+ cf8:	90 e0       	ldi	r25, 0x00	; 0
+ cfa:	df 91       	pop	r29
+ cfc:	cf 91       	pop	r28
+ cfe:	1f 91       	pop	r17
+ d00:	08 95       	ret
+
+00000d02 <godrest>:
+
+
+/* Plays God Rest Ye Merry, Gentlemen*/
+int godrest(void)
+{
+ d02:	1f 93       	push	r17
+ d04:	cf 93       	push	r28
+ d06:	df 93       	push	r29
+	unsigned char x=0;
+    unsigned char length=0, end=0;
+	PORTA = 0x0F;
+ d08:	8f e0       	ldi	r24, 0x0F	; 15
+ d0a:	8b bb       	out	0x1b, r24	; 27
+ d0c:	50 e0       	ldi	r21, 0x00	; 0
+ d0e:	6c e5       	ldi	r22, 0x5C	; 92
+ d10:	70 e0       	ldi	r23, 0x00	; 0
+			if(length==2) 	_delay_ms(700);
+			if(length==4) 	_delay_ms(350);
+			if(length==8) 	_delay_ms(175);
+			if(length==16)	_delay_ms(88);
+			if(note!=OFF){ 
+				note = OFF;
+ d12:	1f ef       	ldi	r17, 0xFF	; 255
+ d14:	c9 e9       	ldi	r28, 0x99	; 153
+ d16:	d3 e0       	ldi	r29, 0x03	; 3
+	unsigned char x=0;
+    unsigned char length=0, end=0;
+	PORTA = 0x0F;
+    while(end!=3 && length!=OFF)
+    {
+        end = decode_switches( PINA );
+ d18:	89 b3       	in	r24, 0x19	; 25
+
+
+/* Switch Decoding Function */
+unsigned char decode_switches(unsigned char x)
+{
+    switch(x){
+ d1a:	8b 30       	cpi	r24, 0x0B	; 11
+ d1c:	71 f0       	breq	.+28     	; 0xd3a <godrest+0x38>
+ d1e:	8c 30       	cpi	r24, 0x0C	; 12
+ d20:	18 f4       	brcc	.+6      	; 0xd28 <godrest+0x26>
+ d22:	87 30       	cpi	r24, 0x07	; 7
+ d24:	71 f4       	brne	.+28     	; 0xd42 <godrest+0x40>
+ d26:	0b c0       	rjmp	.+22     	; 0xd3e <godrest+0x3c>
+ d28:	8d 30       	cpi	r24, 0x0D	; 13
+ d2a:	19 f0       	breq	.+6      	; 0xd32 <godrest+0x30>
+ d2c:	8e 30       	cpi	r24, 0x0E	; 14
+ d2e:	49 f4       	brne	.+18     	; 0xd42 <godrest+0x40>
+ d30:	02 c0       	rjmp	.+4      	; 0xd36 <godrest+0x34>
+ d32:	41 e0       	ldi	r20, 0x01	; 1
+ d34:	07 c0       	rjmp	.+14     	; 0xd44 <godrest+0x42>
+ d36:	40 e0       	ldi	r20, 0x00	; 0
+ d38:	05 c0       	rjmp	.+10     	; 0xd44 <godrest+0x42>
+ d3a:	42 e0       	ldi	r20, 0x02	; 2
+ d3c:	03 c0       	rjmp	.+6      	; 0xd44 <godrest+0x42>
+ d3e:	43 e0       	ldi	r20, 0x03	; 3
+ d40:	01 c0       	rjmp	.+2      	; 0xd44 <godrest+0x42>
+ d42:	44 e0       	ldi	r20, 0x04	; 4
+	PORTA = 0x0F;
+    while(end!=3 && length!=OFF)
+    {
+        end = decode_switches( PINA );
+        if(length!=OFF){
+			note = pgm_read_byte(&god_rest[x][0]);
+ d44:	25 2f       	mov	r18, r21
+ d46:	30 e0       	ldi	r19, 0x00	; 0
+ d48:	22 0f       	add	r18, r18
+ d4a:	33 1f       	adc	r19, r19
+ d4c:	e2 2f       	mov	r30, r18
+ d4e:	f3 2f       	mov	r31, r19
+ d50:	e7 53       	subi	r30, 0x37	; 55
+ d52:	fb 4f       	sbci	r31, 0xFB	; 251
+ d54:	c8 95       	lpm
+ d56:	e0 2d       	mov	r30, r0
+ d58:	e0 93 60 00 	sts	0x0060, r30
+			if(note==E5)	PORTA |= 0xF0;
+ d5c:	80 91 60 00 	lds	r24, 0x0060
+ d60:	86 3d       	cpi	r24, 0xD6	; 214
+ d62:	19 f4       	brne	.+6      	; 0xd6a <godrest+0x68>
+ d64:	8b b3       	in	r24, 0x1b	; 27
+ d66:	80 6f       	ori	r24, 0xF0	; 240
+ d68:	8b bb       	out	0x1b, r24	; 27
+			if(note==D5)	PORTA |= 0x30;
+ d6a:	80 91 60 00 	lds	r24, 0x0060
+ d6e:	80 3d       	cpi	r24, 0xD0	; 208
+ d70:	19 f4       	brne	.+6      	; 0xd78 <godrest+0x76>
+ d72:	8b b3       	in	r24, 0x1b	; 27
+ d74:	80 63       	ori	r24, 0x30	; 48
+ d76:	8b bb       	out	0x1b, r24	; 27
+			if(note==C5)	PORTA |= 0x10;
+ d78:	80 91 60 00 	lds	r24, 0x0060
+ d7c:	8b 3c       	cpi	r24, 0xCB	; 203
+ d7e:	09 f4       	brne	.+2      	; 0xd82 <godrest+0x80>
+ d80:	dc 9a       	sbi	0x1b, 4	; 27
+			if(note==B4)	PORTA |= 0x20;
+ d82:	80 91 60 00 	lds	r24, 0x0060
+ d86:	87 3c       	cpi	r24, 0xC7	; 199
+ d88:	09 f4       	brne	.+2      	; 0xd8c <godrest+0x8a>
+ d8a:	dd 9a       	sbi	0x1b, 5	; 27
+			if(note==A4)	PORTA |= 0x60;
+ d8c:	80 91 60 00 	lds	r24, 0x0060
+ d90:	80 3c       	cpi	r24, 0xC0	; 192
+ d92:	19 f4       	brne	.+6      	; 0xd9a <godrest+0x98>
+ d94:	8b b3       	in	r24, 0x1b	; 27
+ d96:	80 66       	ori	r24, 0x60	; 96
+ d98:	8b bb       	out	0x1b, r24	; 27
+			if(note==G4)	PORTA |= 0x40;
+ d9a:	80 91 60 00 	lds	r24, 0x0060
+ d9e:	89 3b       	cpi	r24, 0xB9	; 185
+ da0:	09 f4       	brne	.+2      	; 0xda4 <godrest+0xa2>
+ da2:	de 9a       	sbi	0x1b, 6	; 27
+			if(note==FS4)	PORTA |= 0x80;
+ da4:	80 91 60 00 	lds	r24, 0x0060
+ da8:	84 3b       	cpi	r24, 0xB4	; 180
+ daa:	09 f4       	brne	.+2      	; 0xdae <godrest+0xac>
+ dac:	df 9a       	sbi	0x1b, 7	; 27
+			if(note==E4)	PORTA |= 0xC0;
+ dae:	80 91 60 00 	lds	r24, 0x0060
+ db2:	8b 3a       	cpi	r24, 0xAB	; 171
+ db4:	19 f4       	brne	.+6      	; 0xdbc <godrest+0xba>
+ db6:	8b b3       	in	r24, 0x1b	; 27
+ db8:	80 6c       	ori	r24, 0xC0	; 192
+ dba:	8b bb       	out	0x1b, r24	; 27
+			if(note==D4)	PORTA |= 0xE0;
+ dbc:	80 91 60 00 	lds	r24, 0x0060
+ dc0:	81 3a       	cpi	r24, 0xA1	; 161
+ dc2:	19 f4       	brne	.+6      	; 0xdca <godrest+0xc8>
+ dc4:	8b b3       	in	r24, 0x1b	; 27
+ dc6:	80 6e       	ori	r24, 0xE0	; 224
+ dc8:	8b bb       	out	0x1b, r24	; 27
+			length = pgm_read_byte(&god_rest[x][1]);
+ dca:	26 53       	subi	r18, 0x36	; 54
+ dcc:	3b 4f       	sbci	r19, 0xFB	; 251
+ dce:	e2 2f       	mov	r30, r18
+ dd0:	f3 2f       	mov	r31, r19
+ dd2:	c8 95       	lpm
+ dd4:	20 2d       	mov	r18, r0
+			if(length==1) 	_delay_ms(1400);
+ dd6:	21 30       	cpi	r18, 0x01	; 1
+ dd8:	49 f4       	brne	.+18     	; 0xdec <godrest+0xea>
+ dda:	80 eb       	ldi	r24, 0xB0	; 176
+ ddc:	96 e3       	ldi	r25, 0x36	; 54
+ dde:	a6 2f       	mov	r26, r22
+ de0:	b7 2f       	mov	r27, r23
+ de2:	11 97       	sbiw	r26, 0x01	; 1
+ de4:	f1 f7       	brne	.-4      	; 0xde2 <godrest+0xe0>
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+ de6:	01 97       	sbiw	r24, 0x01	; 1
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+ de8:	d1 f7       	brne	.-12     	; 0xdde <godrest+0xdc>
+ dea:	2b c0       	rjmp	.+86     	; 0xe42 <godrest+0x140>
+			if(length==2) 	_delay_ms(700);
+ dec:	22 30       	cpi	r18, 0x02	; 2
+ dee:	49 f4       	brne	.+18     	; 0xe02 <godrest+0x100>
+ df0:	88 e5       	ldi	r24, 0x58	; 88
+ df2:	9b e1       	ldi	r25, 0x1B	; 27
+ df4:	a6 2f       	mov	r26, r22
+ df6:	b7 2f       	mov	r27, r23
+ df8:	11 97       	sbiw	r26, 0x01	; 1
+ dfa:	f1 f7       	brne	.-4      	; 0xdf8 <godrest+0xf6>
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+ dfc:	01 97       	sbiw	r24, 0x01	; 1
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+ dfe:	d1 f7       	brne	.-12     	; 0xdf4 <godrest+0xf2>
+ e00:	20 c0       	rjmp	.+64     	; 0xe42 <godrest+0x140>
+			if(length==4) 	_delay_ms(350);
+ e02:	24 30       	cpi	r18, 0x04	; 4
+ e04:	49 f4       	brne	.+18     	; 0xe18 <godrest+0x116>
+ e06:	8c ea       	ldi	r24, 0xAC	; 172
+ e08:	9d e0       	ldi	r25, 0x0D	; 13
+ e0a:	a6 2f       	mov	r26, r22
+ e0c:	b7 2f       	mov	r27, r23
+ e0e:	11 97       	sbiw	r26, 0x01	; 1
+ e10:	f1 f7       	brne	.-4      	; 0xe0e <godrest+0x10c>
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+ e12:	01 97       	sbiw	r24, 0x01	; 1
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+ e14:	d1 f7       	brne	.-12     	; 0xe0a <godrest+0x108>
+ e16:	15 c0       	rjmp	.+42     	; 0xe42 <godrest+0x140>
+			if(length==8) 	_delay_ms(175);
+ e18:	28 30       	cpi	r18, 0x08	; 8
+ e1a:	49 f4       	brne	.+18     	; 0xe2e <godrest+0x12c>
+ e1c:	86 ed       	ldi	r24, 0xD6	; 214
+ e1e:	96 e0       	ldi	r25, 0x06	; 6
+ e20:	a6 2f       	mov	r26, r22
+ e22:	b7 2f       	mov	r27, r23
+ e24:	11 97       	sbiw	r26, 0x01	; 1
+ e26:	f1 f7       	brne	.-4      	; 0xe24 <godrest+0x122>
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+ e28:	01 97       	sbiw	r24, 0x01	; 1
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+ e2a:	d1 f7       	brne	.-12     	; 0xe20 <godrest+0x11e>
+ e2c:	0a c0       	rjmp	.+20     	; 0xe42 <godrest+0x140>
+			if(length==16)	_delay_ms(88);
+ e2e:	20 31       	cpi	r18, 0x10	; 16
+ e30:	41 f4       	brne	.+16     	; 0xe42 <godrest+0x140>
+ e32:	80 e7       	ldi	r24, 0x70	; 112
+ e34:	93 e0       	ldi	r25, 0x03	; 3
+ e36:	a6 2f       	mov	r26, r22
+ e38:	b7 2f       	mov	r27, r23
+ e3a:	11 97       	sbiw	r26, 0x01	; 1
+ e3c:	f1 f7       	brne	.-4      	; 0xe3a <godrest+0x138>
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+ e3e:	01 97       	sbiw	r24, 0x01	; 1
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+ e40:	d1 f7       	brne	.-12     	; 0xe36 <godrest+0x134>
+			if(note!=OFF){ 
+ e42:	80 91 60 00 	lds	r24, 0x0060
+ e46:	8f 3f       	cpi	r24, 0xFF	; 255
+ e48:	49 f0       	breq	.+18     	; 0xe5c <godrest+0x15a>
+				note = OFF;
+ e4a:	10 93 60 00 	sts	0x0060, r17
+				PORTA &= 0x0F;
+ e4e:	8b b3       	in	r24, 0x1b	; 27
+ e50:	8f 70       	andi	r24, 0x0F	; 15
+ e52:	8b bb       	out	0x1b, r24	; 27
+ e54:	8c 2f       	mov	r24, r28
+ e56:	9d 2f       	mov	r25, r29
+ e58:	01 97       	sbiw	r24, 0x01	; 1
+ e5a:	f1 f7       	brne	.-4      	; 0xe58 <godrest+0x156>
+int godrest(void)
+{
+	unsigned char x=0;
+    unsigned char length=0, end=0;
+	PORTA = 0x0F;
+    while(end!=3 && length!=OFF)
+ e5c:	43 30       	cpi	r20, 0x03	; 3
+ e5e:	21 f0       	breq	.+8      	; 0xe68 <godrest+0x166>
+ e60:	2f 3f       	cpi	r18, 0xFF	; 255
+ e62:	11 f0       	breq	.+4      	; 0xe68 <godrest+0x166>
+			if(note!=OFF){ 
+				note = OFF;
+				PORTA &= 0x0F;
+				_delay_ms(1);
+			}
+            x++;
+ e64:	5f 5f       	subi	r21, 0xFF	; 255
+ e66:	58 cf       	rjmp	.-336    	; 0xd18 <godrest+0x16>
+        }
+    }
+	return 0;
+}
+ e68:	80 e0       	ldi	r24, 0x00	; 0
+ e6a:	90 e0       	ldi	r25, 0x00	; 0
+ e6c:	df 91       	pop	r29
+ e6e:	cf 91       	pop	r28
+ e70:	1f 91       	pop	r17
+ e72:	08 95       	ret
+
+00000e74 <music>:
+}
+   
+
+/* Musical Selection Function */
+int music(void)
+{
+ e74:	ef 92       	push	r14
+ e76:	ff 92       	push	r15
+ e78:	0f 93       	push	r16
+ e7a:	1f 93       	push	r17
+	PORTA = 0x0F;
+ e7c:	8f e0       	ldi	r24, 0x0F	; 15
+ e7e:	8b bb       	out	0x1b, r24	; 27
+	PORTA |= 0x9F;
+ e80:	8b b3       	in	r24, 0x1b	; 27
+ e82:	8f 69       	ori	r24, 0x9F	; 159
+ e84:	8b bb       	out	0x1b, r24	; 27
+ e86:	10 e0       	ldi	r17, 0x00	; 0
+    unsigned char song1=0,song2=0;
+    while(song1!=3 && song2!=3)
+    {
+		PORTA = 0x9F;
+ e88:	af e9       	ldi	r26, 0x9F	; 159
+ e8a:	ea 2e       	mov	r14, r26
+        song1 = read_switches();
+        switch(song1){
+            case 0:
+				PORTA = 0x3F;
+ e8c:	ff e3       	ldi	r31, 0x3F	; 63
+ e8e:	ff 2e       	mov	r15, r31
+                    default:
+                        break;
+                }
+                break;
+            case 1:
+				PORTA = 0xCF;
+ e90:	0f ec       	ldi	r16, 0xCF	; 207
+	PORTA = 0x0F;
+	PORTA |= 0x9F;
+    unsigned char song1=0,song2=0;
+    while(song1!=3 && song2!=3)
+    {
+		PORTA = 0x9F;
+ e92:	eb ba       	out	0x1b, r14	; 27
+        song1 = read_switches();
+ e94:	95 db       	rcall	.-2262   	; 0x5c0 <read_switches>
+        switch(song1){
+ e96:	81 30       	cpi	r24, 0x01	; 1
+ e98:	81 f0       	breq	.+32     	; 0xeba <music+0x46>
+ e9a:	81 30       	cpi	r24, 0x01	; 1
+ e9c:	18 f0       	brcs	.+6      	; 0xea4 <music+0x30>
+ e9e:	82 30       	cpi	r24, 0x02	; 2
+ ea0:	f1 f4       	brne	.+60     	; 0xede <music+0x6a>
+ ea2:	1b c0       	rjmp	.+54     	; 0xeda <music+0x66>
+            case 0:
+				PORTA = 0x3F;
+ ea4:	fb ba       	out	0x1b, r15	; 27
+                song2 = read_switches();
+ ea6:	8c db       	rcall	.-2280   	; 0x5c0 <read_switches>
+ ea8:	18 2f       	mov	r17, r24
+                switch(song2){
+ eaa:	81 30       	cpi	r24, 0x01	; 1
+ eac:	21 f0       	breq	.+8      	; 0xeb6 <music+0x42>
+ eae:	81 30       	cpi	r24, 0x01	; 1
+ eb0:	58 f4       	brcc	.+22     	; 0xec8 <music+0x54>
+                    case 0:
+                        mario_song();
+ eb2:	70 dc       	rcall	.-1824   	; 0x794 <mario_song>
+ eb4:	16 c0       	rjmp	.+44     	; 0xee2 <music+0x6e>
+                        break;
+                    case 1:
+                        heartandsoul();
+ eb6:	97 dd       	rcall	.-1234   	; 0x9e6 <heartandsoul>
+ eb8:	ec cf       	rjmp	.-40     	; 0xe92 <music+0x1e>
+                    default:
+                        break;
+                }
+                break;
+            case 1:
+				PORTA = 0xCF;
+ eba:	0b bb       	out	0x1b, r16	; 27
+                song2 = read_switches();
+ ebc:	81 db       	rcall	.-2302   	; 0x5c0 <read_switches>
+ ebe:	18 2f       	mov	r17, r24
+                switch(song2){
+ ec0:	81 30       	cpi	r24, 0x01	; 1
+ ec2:	39 f0       	breq	.+14     	; 0xed2 <music+0x5e>
+ ec4:	81 30       	cpi	r24, 0x01	; 1
+ ec6:	18 f0       	brcs	.+6      	; 0xece <music+0x5a>
+ ec8:	12 30       	cpi	r17, 0x02	; 2
+ eca:	59 f4       	brne	.+22     	; 0xee2 <music+0x6e>
+ ecc:	04 c0       	rjmp	.+8      	; 0xed6 <music+0x62>
+                    case 0:
+                        jinglebells();
+ ece:	4a de       	rcall	.-876    	; 0xb64 <jinglebells>
+ ed0:	08 c0       	rjmp	.+16     	; 0xee2 <music+0x6e>
+                        break;
+                    case 1:
+                        godrest();
+ ed2:	17 df       	rcall	.-466    	; 0xd02 <godrest>
+ ed4:	de cf       	rjmp	.-68     	; 0xe92 <music+0x1e>
+                        break;
+					case 2:
+                		three_note_keyboard();
+ ed6:	2a dc       	rcall	.-1964   	; 0x72c <three_note_keyboard>
+ ed8:	dc cf       	rjmp	.-72     	; 0xe92 <music+0x1e>
+                    default:
+                        break;
+                }
+                break;
+            case 2:
+                three_note_keyboard();
+ eda:	28 dc       	rcall	.-1968   	; 0x72c <three_note_keyboard>
+ edc:	02 c0       	rjmp	.+4      	; 0xee2 <music+0x6e>
+int music(void)
+{
+	PORTA = 0x0F;
+	PORTA |= 0x9F;
+    unsigned char song1=0,song2=0;
+    while(song1!=3 && song2!=3)
+ ede:	83 30       	cpi	r24, 0x03	; 3
+ ee0:	11 f0       	breq	.+4      	; 0xee6 <music+0x72>
+ ee2:	13 30       	cpi	r17, 0x03	; 3
+ ee4:	b1 f6       	brne	.-84     	; 0xe92 <music+0x1e>
+                break;
+            default:
+                break;
+        }
+    }
+	PORTA = 0x0F;
+ ee6:	8f e0       	ldi	r24, 0x0F	; 15
+ ee8:	8b bb       	out	0x1b, r24	; 27
+    return 0;
+}
+ eea:	80 e0       	ldi	r24, 0x00	; 0
+ eec:	90 e0       	ldi	r25, 0x00	; 0
+ eee:	1f 91       	pop	r17
+ ef0:	0f 91       	pop	r16
+ ef2:	ff 90       	pop	r15
+ ef4:	ef 90       	pop	r14
+ ef6:	08 95       	ret
+
+00000ef8 <main>:
+unsigned char pass0=0x00,pass1=0x00,pass2=0x00,pass3=0x00;
+unsigned char state0=0,state1=0,state2=0,state3=0;
+
+
+int main(void)
+{
+ ef8:	ff 92       	push	r15
+ efa:	0f 93       	push	r16
+ efc:	1f 93       	push	r17
+ efe:	cf 93       	push	r28
+ f00:	df 93       	push	r29
+	//Initialization
+    sei();              //Enable global interrupts
+ f02:	78 94       	sei
+    TCCR0   =   0x03;   //Prescaler = 64
+ f04:	83 e0       	ldi	r24, 0x03	; 3
+ f06:	83 bf       	out	0x33, r24	; 51
+    TIMSK   |=  0x02;   //Enable TCNT0
+ f08:	89 b7       	in	r24, 0x39	; 57
+ f0a:	82 60       	ori	r24, 0x02	; 2
+ f0c:	89 bf       	out	0x39, r24	; 57
+    DDRC    =   0xFF;
+ f0e:	8f ef       	ldi	r24, 0xFF	; 255
+ f10:	84 bb       	out	0x14, r24	; 20
+    PORTC   =   0x00;
+ f12:	15 ba       	out	0x15, r1	; 21
+	DDRA    =   0xF0;
+ f14:	80 ef       	ldi	r24, 0xF0	; 240
+ f16:	8a bb       	out	0x1a, r24	; 26
+    PORTA   =   0x0F;
+ f18:	8f e0       	ldi	r24, 0x0F	; 15
+ f1a:	8b bb       	out	0x1b, r24	; 27
+	unsigned char x,count=0;
+	while(1)
+	{
+		PORTA |= 0xFF;
+ f1c:	ff 24       	eor	r15, r15
+ f1e:	fa 94       	dec	r15
+		x = read_switches();
+		if(x==pass0) state0=1;
+ f20:	11 e0       	ldi	r17, 0x01	; 1
+                   		break;
+               		default:
+                   		break;
+           		}
+		}
+		PORTA = 0x0F;
+ f22:	0f e0       	ldi	r16, 0x0F	; 15
+ f24:	c0 e0       	ldi	r28, 0x00	; 0
+ f26:	d4 eb       	ldi	r29, 0xB4	; 180
+	DDRA    =   0xF0;
+    PORTA   =   0x0F;
+	unsigned char x,count=0;
+	while(1)
+	{
+		PORTA |= 0xFF;
+ f28:	8b b3       	in	r24, 0x1b	; 27
+ f2a:	fb ba       	out	0x1b, r15	; 27
+		x = read_switches();
+ f2c:	49 db       	rcall	.-2414   	; 0x5c0 <read_switches>
+		if(x==pass0) state0=1;
+ f2e:	90 91 63 00 	lds	r25, 0x0063
+ f32:	89 17       	cp	r24, r25
+ f34:	11 f4       	brne	.+4      	; 0xf3a <main+0x42>
+ f36:	10 93 67 00 	sts	0x0067, r17
+		x = read_switches();
+ f3a:	42 db       	rcall	.-2428   	; 0x5c0 <read_switches>
+		if(x==pass1) state1=1;
+ f3c:	90 91 64 00 	lds	r25, 0x0064
+ f40:	89 17       	cp	r24, r25
+ f42:	11 f4       	brne	.+4      	; 0xf48 <main+0x50>
+ f44:	10 93 68 00 	sts	0x0068, r17
+		x = read_switches();
+ f48:	3b db       	rcall	.-2442   	; 0x5c0 <read_switches>
+		if(x==pass2) state2=1;
+ f4a:	90 91 65 00 	lds	r25, 0x0065
+ f4e:	89 17       	cp	r24, r25
+ f50:	11 f4       	brne	.+4      	; 0xf56 <main+0x5e>
+ f52:	10 93 69 00 	sts	0x0069, r17
+		x = read_switches();
+ f56:	34 db       	rcall	.-2456   	; 0x5c0 <read_switches>
+		if(x==pass3) state3=1;
+ f58:	90 91 66 00 	lds	r25, 0x0066
+ f5c:	89 17       	cp	r24, r25
+ f5e:	11 f4       	brne	.+4      	; 0xf64 <main+0x6c>
+ f60:	10 93 6a 00 	sts	0x006A, r17
+		PORTA &= 0x0F;			//Pull switches back up
+ f64:	8b b3       	in	r24, 0x1b	; 27
+ f66:	8f 70       	andi	r24, 0x0F	; 15
+ f68:	8b bb       	out	0x1b, r24	; 27
+ f6a:	1e c0       	rjmp	.+60     	; 0xfa8 <main+0xb0>
+		while(state0 && state1 && state2 && state3)
+		{
+			PORTA |= 0x60;
+ f6c:	8b b3       	in	r24, 0x1b	; 27
+ f6e:	80 66       	ori	r24, 0x60	; 96
+ f70:	8b bb       	out	0x1b, r24	; 27
+			PORTA &= 0x6F;
+ f72:	8b b3       	in	r24, 0x1b	; 27
+ f74:	8f 76       	andi	r24, 0x6F	; 111
+ f76:	8b bb       	out	0x1b, r24	; 27
+			x = read_switches();
+ f78:	23 db       	rcall	.-2490   	; 0x5c0 <read_switches>
+            	switch(x)
+ f7a:	81 30       	cpi	r24, 0x01	; 1
+ f7c:	49 f0       	breq	.+18     	; 0xf90 <main+0x98>
+ f7e:	81 30       	cpi	r24, 0x01	; 1
+ f80:	28 f0       	brcs	.+10     	; 0xf8c <main+0x94>
+ f82:	82 30       	cpi	r24, 0x02	; 2
+ f84:	39 f0       	breq	.+14     	; 0xf94 <main+0x9c>
+ f86:	83 30       	cpi	r24, 0x03	; 3
+ f88:	79 f4       	brne	.+30     	; 0xfa8 <main+0xb0>
+ f8a:	06 c0       	rjmp	.+12     	; 0xf98 <main+0xa0>
+				{
+               		case 0:
+               		   	number();
+ f8c:	70 db       	rcall	.-2336   	; 0x66e <number>
+ f8e:	0c c0       	rjmp	.+24     	; 0xfa8 <main+0xb0>
+                   		break;
+               		case 1:
+                   		music();
+ f90:	71 df       	rcall	.-286    	; 0xe74 <music>
+ f92:	0a c0       	rjmp	.+20     	; 0xfa8 <main+0xb0>
+                   		break;
+               		case 2:
+                   		password_reset();
+ f94:	a2 db       	rcall	.-2236   	; 0x6da <password_reset>
+ f96:	08 c0       	rjmp	.+16     	; 0xfa8 <main+0xb0>
+                   		break;
+               		case 3:
+                   		state0 = 0;	
+ f98:	10 92 67 00 	sts	0x0067, r1
+						state1 = 0;
+ f9c:	10 92 68 00 	sts	0x0068, r1
+						state2 = 0;
+ fa0:	10 92 69 00 	sts	0x0069, r1
+						state3 = 0;
+ fa4:	10 92 6a 00 	sts	0x006A, r1
+		x = read_switches();
+		if(x==pass2) state2=1;
+		x = read_switches();
+		if(x==pass3) state3=1;
+		PORTA &= 0x0F;			//Pull switches back up
+		while(state0 && state1 && state2 && state3)
+ fa8:	80 91 67 00 	lds	r24, 0x0067
+ fac:	88 23       	and	r24, r24
+ fae:	61 f0       	breq	.+24     	; 0xfc8 <main+0xd0>
+ fb0:	80 91 68 00 	lds	r24, 0x0068
+ fb4:	88 23       	and	r24, r24
+ fb6:	41 f0       	breq	.+16     	; 0xfc8 <main+0xd0>
+ fb8:	80 91 69 00 	lds	r24, 0x0069
+ fbc:	88 23       	and	r24, r24
+ fbe:	21 f0       	breq	.+8      	; 0xfc8 <main+0xd0>
+ fc0:	80 91 6a 00 	lds	r24, 0x006A
+ fc4:	88 23       	and	r24, r24
+ fc6:	91 f6       	brne	.-92     	; 0xf6c <main+0x74>
+                   		break;
+               		default:
+                   		break;
+           		}
+		}
+		PORTA = 0x0F;
+ fc8:	0b bb       	out	0x1b, r16	; 27
+ fca:	20 e0       	ldi	r18, 0x00	; 0
+ fcc:	8c 2f       	mov	r24, r28
+ fce:	9d 2f       	mov	r25, r29
+ fd0:	01 97       	sbiw	r24, 0x01	; 1
+ fd2:	f1 f7       	brne	.-4      	; 0xfd0 <main+0xd8>
+		for(count=0;count<7;count++)
+		{
+			_delay_ms(50);
+			PORTA = ~PORTA;
+ fd4:	8b b3       	in	r24, 0x1b	; 27
+ fd6:	80 95       	com	r24
+ fd8:	8b bb       	out	0x1b, r24	; 27
+               		default:
+                   		break;
+           		}
+		}
+		PORTA = 0x0F;
+		for(count=0;count<7;count++)
+ fda:	2f 5f       	subi	r18, 0xFF	; 255
+ fdc:	27 30       	cpi	r18, 0x07	; 7
+ fde:	b1 f7       	brne	.-20     	; 0xfcc <main+0xd4>
+ fe0:	a3 cf       	rjmp	.-186    	; 0xf28 <main+0x30>
+
+00000fe2 <_exit>:
+ fe2:	f8 94       	cli
+
+00000fe4 <__stop_program>:
+ fe4:	ff cf       	rjmp	.-2      	; 0xfe4 <__stop_program>

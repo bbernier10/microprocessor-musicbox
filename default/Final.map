@@ -1,0 +1,389 @@
+Archive member included because of file (symbol)
+
+c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2\libgcc.a(_exit.o)
+                              c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/crts4414.o (exit)
+c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2\libgcc.a(_copy_data.o)
+                              Final.o (__do_copy_data)
+c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2\libgcc.a(_clear_bss.o)
+                              Final.o (__do_clear_bss)
+
+Allocating common symbols
+Common symbol       size              file
+
+xoldz               0x1               Final.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+text             0x00000000         0x00002000         xr
+data             0x00800060         0x0000ffa0         rw !x
+eeprom           0x00810000         0x00010000         rw !x
+fuse             0x00820000         0x00000400         rw !x
+lock             0x00830000         0x00000400         rw !x
+signature        0x00840000         0x00000400         rw !x
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/crts4414.o
+LOAD Final.o
+LOAD c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2\libgcc.a
+LOAD c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib\libc.a
+LOAD c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2\libgcc.a
+
+.hash
+ *(.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+ *(.rel.text.*)
+ *(.rel.gnu.linkonce.t*)
+
+.rela.text
+ *(.rela.text)
+ *(.rela.text.*)
+ *(.rela.gnu.linkonce.t*)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+ *(.rel.rodata.*)
+ *(.rel.gnu.linkonce.r*)
+
+.rela.rodata
+ *(.rela.rodata)
+ *(.rela.rodata.*)
+ *(.rela.gnu.linkonce.r*)
+
+.rel.data
+ *(.rel.data)
+ *(.rel.data.*)
+ *(.rel.gnu.linkonce.d*)
+
+.rela.data
+ *(.rela.data)
+ *(.rela.data.*)
+ *(.rela.gnu.linkonce.d*)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.text           0x00000000      0xfe6
+ *(.vectors)
+ .vectors       0x00000000       0x1a c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/crts4414.o
+                0x00000000                __vectors
+                0x00000000                __vector_default
+ *(.vectors)
+ *(.progmem.gcc*)
+ *(.progmem*)
+ .progmem.data  0x0000001a      0x53b Final.o
+                0x0000001a                keyboard_notes
+                0x0000036d                heart_and_soul
+                0x000004c9                god_rest
+                0x0000001f                mario
+                0x000003ef                jingle_bells
+                0x00000556                . = ALIGN (0x2)
+ *fill*         0x00000555        0x1 00
+                0x00000556                __trampolines_start = .
+ *(.trampolines)
+ .trampolines   0x00000556        0x0 linker stubs
+ *(.trampolines*)
+                0x00000556                __trampolines_end = .
+ *(.jumptables)
+ *(.jumptables*)
+ *(.lowtext)
+ *(.lowtext*)
+                0x00000556                __ctors_start = .
+ *(.ctors)
+                0x00000556                __ctors_end = .
+                0x00000556                __dtors_start = .
+ *(.dtors)
+                0x00000556                __dtors_end = .
+ SORT(*)(.ctors)
+ SORT(*)(.dtors)
+ *(.init0)
+ .init0         0x00000556        0x0 c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/crts4414.o
+                0x00000556                __init
+ *(.init0)
+ *(.init1)
+ *(.init1)
+ *(.init2)
+ .init2         0x00000556        0xc c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/crts4414.o
+ *(.init2)
+ *(.init3)
+ *(.init3)
+ *(.init4)
+ .init4         0x00000562       0x18 c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2\libgcc.a(_copy_data.o)
+                0x00000562                __do_copy_data
+ .init4         0x0000057a       0x10 c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2\libgcc.a(_clear_bss.o)
+                0x0000057a                __do_clear_bss
+ *(.init4)
+ *(.init5)
+ *(.init5)
+ *(.init6)
+ *(.init6)
+ *(.init7)
+ *(.init7)
+ *(.init8)
+ *(.init8)
+ *(.init9)
+ .init9         0x0000058a        0x4 c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/crts4414.o
+ *(.init9)
+ *(.text)
+ .text          0x0000058e        0x2 c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/crts4414.o
+                0x0000058e                __vector_1
+                0x0000058e                __vector_12
+                0x0000058e                __bad_interrupt
+                0x0000058e                __vector_6
+                0x0000058e                __vector_3
+                0x0000058e                __vector_11
+                0x0000058e                __vector_5
+                0x0000058e                __vector_4
+                0x0000058e                __vector_9
+                0x0000058e                __vector_2
+                0x0000058e                __vector_8
+                0x0000058e                __vector_10
+ .text          0x00000590      0xa52 Final.o
+                0x00000d02                godrest
+                0x000005c0                read_switches
+                0x00000b64                jinglebells
+                0x000009e6                heartandsoul
+                0x0000066e                number
+                0x00000e74                music
+                0x000006da                password_reset
+                0x00000590                __vector_7
+                0x00000642                decode_switches
+                0x00000ef8                main
+                0x00000794                mario_song
+                0x0000072c                three_note_keyboard
+ .text          0x00000fe2        0x0 c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2\libgcc.a(_exit.o)
+ .text          0x00000fe2        0x0 c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2\libgcc.a(_copy_data.o)
+ .text          0x00000fe2        0x0 c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2\libgcc.a(_clear_bss.o)
+                0x00000fe2                . = ALIGN (0x2)
+ *(.text.*)
+ .text.libgcc   0x00000fe2        0x0 c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2\libgcc.a(_exit.o)
+ .text.libgcc   0x00000fe2        0x0 c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2\libgcc.a(_copy_data.o)
+ .text.libgcc   0x00000fe2        0x0 c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2\libgcc.a(_clear_bss.o)
+                0x00000fe2                . = ALIGN (0x2)
+ *(.fini9)
+ .fini9         0x00000fe2        0x0 c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2\libgcc.a(_exit.o)
+                0x00000fe2                exit
+                0x00000fe2                _exit
+ *(.fini9)
+ *(.fini8)
+ *(.fini8)
+ *(.fini7)
+ *(.fini7)
+ *(.fini6)
+ *(.fini6)
+ *(.fini5)
+ *(.fini5)
+ *(.fini4)
+ *(.fini4)
+ *(.fini3)
+ *(.fini3)
+ *(.fini2)
+ *(.fini2)
+ *(.fini1)
+ *(.fini1)
+ *(.fini0)
+ .fini0         0x00000fe2        0x4 c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2\libgcc.a(_exit.o)
+ *(.fini0)
+                0x00000fe6                _etext = .
+
+.data           0x00800060        0x2 load address 0x00000fe6
+                0x00800060                PROVIDE (__data_start, .)
+ *(.data)
+ .data          0x00800060        0x0 c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/crts4414.o
+ .data          0x00800060        0x1 Final.o
+                0x00800060                note
+ .data          0x00800061        0x0 c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2\libgcc.a(_exit.o)
+ .data          0x00800061        0x0 c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2\libgcc.a(_copy_data.o)
+ .data          0x00800061        0x0 c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2\libgcc.a(_clear_bss.o)
+ *(.data*)
+ *(.rodata)
+ *(.rodata*)
+ *(.gnu.linkonce.d*)
+                0x00800062                . = ALIGN (0x2)
+ *fill*         0x00800061        0x1 00
+                0x00800062                _edata = .
+                0x00800062                PROVIDE (__data_end, .)
+
+.bss            0x00800062        0xa
+                0x00800062                PROVIDE (__bss_start, .)
+ *(.bss)
+ .bss           0x00800062        0x0 c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/crts4414.o
+ .bss           0x00800062        0x9 Final.o
+                0x00800066                pass3
+                0x00800068                state1
+                0x00800065                pass2
+                0x0080006a                state3
+                0x00800067                state0
+                0x00800064                pass1
+                0x00800062                mode_0_number
+                0x00800063                pass0
+                0x00800069                state2
+ .bss           0x0080006b        0x0 c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2\libgcc.a(_exit.o)
+ .bss           0x0080006b        0x0 c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2\libgcc.a(_copy_data.o)
+ .bss           0x0080006b        0x0 c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2\libgcc.a(_clear_bss.o)
+ *(.bss*)
+ *(COMMON)
+ COMMON         0x0080006b        0x1 Final.o
+                0x0080006b                xoldz
+                0x0080006c                PROVIDE (__bss_end, .)
+                0x00000fe6                __data_load_start = LOADADDR (.data)
+                0x00000fe8                __data_load_end = (__data_load_start + SIZEOF (.data))
+
+.noinit         0x0080006c        0x0
+                0x0080006c                PROVIDE (__noinit_start, .)
+ *(.noinit*)
+                0x0080006c                PROVIDE (__noinit_end, .)
+                0x0080006c                _end = .
+                0x0080006c                PROVIDE (__heap_start, .)
+
+.eeprom         0x00810000        0x0
+ *(.eeprom*)
+                0x00810000                __eeprom_end = .
+
+.fuse
+ *(.fuse)
+ *(.lfuse)
+ *(.hfuse)
+ *(.efuse)
+
+.lock
+ *(.lock*)
+
+.signature
+ *(.signature*)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment
+ *(.comment)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x00000000       0x20
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000       0x20 Final.o
+
+.debug_pubnames
+                0x00000000      0x193
+ *(.debug_pubnames)
+ .debug_pubnames
+                0x00000000      0x193 Final.o
+
+.debug_info     0x00000000     0x1119
+ *(.debug_info)
+ .debug_info    0x00000000     0x1119 Final.o
+ *(.gnu.linkonce.wi.*)
+
+.debug_abbrev   0x00000000      0x252
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000      0x252 Final.o
+
+.debug_line     0x00000000      0xdce
+ *(.debug_line)
+ .debug_line    0x00000000      0xdce Final.o
+
+.debug_frame    0x00000000       0xd0
+ *(.debug_frame)
+ .debug_frame   0x00000000       0xd0 Final.o
+
+.debug_str      0x00000000      0x20b
+ *(.debug_str)
+ .debug_str     0x00000000      0x20b Final.o
+                                0x252 (size before relaxing)
+
+.debug_loc      0x00000000     0x1247
+ *(.debug_loc)
+ .debug_loc     0x00000000     0x1247 Final.o
+
+.debug_macinfo
+ *(.debug_macinfo)
+OUTPUT(Final.elf elf32-avr)
+LOAD linker stubs
+
+.debug_ranges   0x00000000      0x2d0
+ .debug_ranges  0x00000000      0x2d0 Final.o
